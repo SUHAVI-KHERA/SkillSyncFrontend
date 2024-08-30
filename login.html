@@ -65,9 +65,8 @@
             if (email === 'user@gmail.com' && password === 'Password12!') {
                 showToast('Login successful!', 'bg-green-500');
                 setTimeout(() => {
-                    // Redirect to the home page after a short delay
-                    window.location.href = 'home.html'; // Replace with the actual URL of your home page
-                }, 1000); // Delay to show the toast message before redirecting
+                    window.location.href = 'homepage.html';
+                }, 1000);
             } else {
                 showToast('Invalid email or password');
             }

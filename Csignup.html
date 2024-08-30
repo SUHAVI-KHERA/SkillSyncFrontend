@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Sign-Up</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-white flex items-center justify-center h-screen relative">
+    <div class="bg-white p-8 rounded border-2 border-solid border-black border-opacity-5 shadow-lg w-full max-w-md">
+        <h2 class="text-2xl font-semibold text-black mb-6 text-center">Sign-Up</h2>
+        
+        <form id="signUpForm">
+            <!-- Name Field -->
+            <div class="mb-4">
+                <label for="name" class="block text-black font-medium mb-2">Name</label>
+                <input type="text" id="name" name="name" class="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-black" placeholder="Enter your name" required>
+            </div>
+
+            <!-- Email Field -->
+            <div class="mb-4">
+                <label for="email" class="block text-black font-medium mb-2">Email</label>
+                <input type="email" id="email" name="email" class="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-black" placeholder="Enter your email" required>
+            </div>
+
+            <!-- Address Field -->
+            <div class="mb-4">
+                <label for="address" class="block text-black font-medium mb-2">Address</label>
+                <input type="text" id="address" name="address" class="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-black" placeholder="Enter your address" required>
+            </div>
+
+            <!-- Company/Client Option -->
+            <div class="mb-4">
+                <label for="type" class="block text-black font-medium mb-2">Company/Individual</label>
+                <select id="type" name="type" class="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-black" required>
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="company">Company</option>
+                    <option value="client">Individual</option>
+                </select>
+            </div>
+
+            <!-- Company Name Field (Hidden by Default) -->
+            <div id="companyNameField" class="mb-4 hidden">
+                <label for="companyName" class="block text-black font-medium mb-2">Company Name</label>
+                <input type="text" id="companyName" name="companyName" class="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-black" placeholder="Enter your company name">
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="w-full bg-red-500 hover:bg-red-800 text-white font-bold py-2 px-4 rounded transition duration-200">
+                Sign Up
+            </button>
+        </form>
+    </div>
+
+    <!-- Toast Container -->
+    <div id="toast" class="fixed bottom-5 right-5 bg-green-600 text-white px-4 py-2 rounded shadow-lg opacity-0 transition-opacity duration-300 pointer-events-none">
+        Form submitted successfully!
+    </div>
+
+    <!-- Script to handle form submission, toast display, and redirect -->
+    <script>
+        const typeSelect = document.getElementById('type');
+        const companyNameField = document.getElementById('companyNameField');
+
+        typeSelect.addEventListener('change', function() {
+            if (this.value === 'company') {
+                companyNameField.classList.remove('hidden');
+                companyNameField.querySelector('input').setAttribute('required', 'required');
+            } else {
+                companyNameField.classList.add('hidden');
+                companyNameField.querySelector('input').removeAttribute('required');
+            }
+        });
+
+        document.getElementById('signUpForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            showToast();
+        });
+
+        function showToast() {
+            const toast = document.getElementById('toast');
+            toast.classList.remove('opacity-0');
+            toast.classList.add('opacity-100');
+
+            setTimeout(() => {
+                toast.classList.remove('opacity-100');
+                toast.classList.add('opacity-0');
+
+                // Redirect to the home page after the toast fades out
+                setTimeout(() => {
+                    window.location.href = 'homepage.html';
+                }, 300);
+            }, 3000); 
+        }
+    </script>
+</body>
+</html>
+

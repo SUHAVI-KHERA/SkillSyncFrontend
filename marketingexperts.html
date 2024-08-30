@@ -5,6 +5,212 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marketing Experts</title>
     <style>
+        /* footer */
+.footer-section {
+    background-color: black;
+    color: white;
+    padding: 40px 0;
+    font-family: Arial, sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+/* General column styles */
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Specific column styling */
+.column-one {
+    width: 10%;
+    margin-right: 1%;
+    margin-left: 5%;
+}
+
+.column-two {
+    width: 50%;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+.column-three {
+    width: 10%;
+    margin-left: 25%;
+}
+
+/* Styling for HR */
+.footer-header-divider {
+    border: none;
+    border-top: 1px solid white;
+    margin: 10px 0;
+    width: 60%;
+}
+
+/* Specific styling for featured design skills columns */
+.skills-grid {
+    display: flex;
+    justify-content: space-between;
+}
+
+.skills-grid ul {
+    flex: 1;
+    min-width: 150px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0 10px;
+}
+
+/* List styles */
+.footer-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #d1363e;
+}
+
+/* Footer bottom styling */
+.footer-divider {
+    border: none;
+    border-top: 1px solid white;
+    margin: 20px 0;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+.footer-bottom a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-bottom a:hover {
+    color: #d1363e;
+}
+
+/* Social icon styles */
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.social-icons img {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1);
+    transition: filter 0.3s;
+}
+
+.social-icons a:hover img {
+    filter: brightness(0) invert(1) sepia(1) hue-rotate(-50deg);
+}
+
+/* Responsive styling */
+@media (max-width: 992px) {
+    .footer-column {
+        flex-basis: 50%;
+    }
+
+    .skills-grid {
+        flex-wrap: wrap;
+    }
+
+    .skills-grid ul {
+        flex-basis: 45%;
+        margin-bottom: 20px;
+    }
+
+    .column-one, .column-two, .column-three {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-column {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
+
+    .skills-grid {
+        flex-direction: column;
+    }
+
+    .skills-grid ul {
+        flex-basis: 100%;
+        margin-bottom: 10px;
+    }
+
+    .footer-bottom {
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .skills-grid ul {
+        margin: 0;
+    }
+
+    .social-icons a {
+        margin: 0 5px;
+    }
+
+    .social-icons img {
+        width: 18px;
+        height: 18px;
+    }
+
+    .footer-bottom p {
+        font-size: 14px;
+    }
+
+    .footer-bottom a {
+        font-size: 14px;
+    }
+}
         body {
             margin: 0;
             font-family: Arial, sans-serif;
@@ -29,7 +235,7 @@
             justify-content: center;
             text-align: left;
             height: 80vh;
-            background-image: url(images/developers.jpeg); /* Add the path to your background image */
+            background-image: url(https://imgs.search.brave.com/F-ien2qxwtL1A1VcJANXONZmxRxhKBJkFTHMx7skeSo/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTA2/Nzc2NTA2Ni9waG90/by9lbWFpbC1tYXJr/ZXRpbmctb25saW5l/LW1lc3NhZ2UtbmV0/d29yay1jb21tdW5p/Y2F0aW9uLWludGVy/bmV0LndlYnA_Yj0x/JnM9NjEyeDYxMiZ3/PTAmaz0yMCZjPU1F/UWFKUlJFd0lSZFJa/T1hTLUs3S0dFNnh0/YS1telNLQ3g5TS0w/WFpBRDQ9); /* Add the path to your background image */
             background-size: cover;
             background-position: center;
             position: relative;
@@ -70,13 +276,18 @@
 
        
         button {
-            background-color: black;
+            background-color:#d1363e;
             color: white;
             border: none;
             padding: 10px 20px;
             font-size: 16px;
             cursor: pointer;
             margin-top: 20px;
+        }
+        button:hover {
+    background-color:  #c9050f;
+   
+    font-weight: 700;
         }
 
         .intro-text {
@@ -124,8 +335,8 @@
 
     .profile-card img {
         width: 250px;
-        height: auto;
-        border-radius: 8px;
+        height:250px;
+        border-radius: 2px;
     }
 
 
@@ -148,7 +359,7 @@
         }
 
         .view-more-button {
-            background-color: #000;
+            background-color:#d1363e;
             color: #fff;
             border: none;
             padding: 5px 20px;
@@ -160,7 +371,7 @@
         }
 
         .view-more-button:hover {
-            background-color: #333;
+            background-color: #c9050f;
         }
 
       /* why are you hire */
@@ -213,7 +424,7 @@
 }
 
 .skills-more a:hover {
-    color:#d1363e ;
+    color:#c9050f ;
     font-weight: 700;
 } 
 
@@ -236,7 +447,7 @@
 
 .skills-list a:hover {
    text-decoration: underline;
-    color: #d1363e; /* Change color on hover */
+    color: #c9050f; /* Change color on hover */
 }
 
 
@@ -252,9 +463,9 @@
     <!-- Hero Section -->
     <div class="hero-section">
         <div class="content">
-            <h1>Connect with Top Designers</h1>
+            <h1>Connect with Top Marketing Experts</h1>
             <p>SkillSync is a marketplace for top developers, engineers, programmers, coders, architects, and consultants. Top companies and start-ups hire freelance developers from Toptal for their most mission-critical projects.</p>
-            <button>Hire top Developers</button>
+            <button>Hire top Marketing Experts</button>
         </div>
     </div>
 
@@ -267,17 +478,17 @@
             <h2>Explore the top 3 freelancers <br>who deliver outstanding <br>results</h2>
         </div>
         <div class="profile-card">
-            <img src="images/p1.jpeg" alt="Sacha Dubois">
+            <img src="https://imgs.search.brave.com/EcbeGlqXlo-1UsUTCdkF0yVSwJa2x_xL3p66MTvzPns/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMtZ2xvYmFsLndl/YnNpdGUtZmlsZXMu/Y29tLzVlYzdkYWQy/ZTZmNjI5NWE5ZTJh/MjNkZC81ZWRmYTdj/NmY5NzhlNzUzNzJk/YzMzMmVfcHJvZmls/ZXBob3RvMS5qcGVn" alt="Sacha Dubois">
             <h3>Sacha Dubois</h3>
             <p>Creative Director</p>
         </div>
         <div class="profile-card">
-            <img src="images/p3.jpeg" alt="Lorna Alvarado">
+            <img src="https://imgs.search.brave.com/p4Pz6USv0Np57kAh0NHZE4B4V8xnUAD0-yMPE1siUgI/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9leHBl/cnRwaG90b2dyYXBo/eS5iLWNkbi5uZXQv/d3AtY29udGVudC91/cGxvYWRzLzIwMjAv/MDgvcHJvZmlsZS1w/aG90b3MtNC5qcGc" alt="Lorna Alvarado">
             <h3>Lorna Alvarado</h3>
             <p>UI/UX Designer</p>
         </div>
         <div class="profile-card">
-            <img src="images/p3 (2).jpeg" alt="Itsuki Takahashi">
+            <img src="https://imgs.search.brave.com/fFUWByEobtO5l5q5lDSCWOcHc6DomvBrTd856pwJ4GY/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTEz/Nzg1MTU3NC9waG90/by9wcm9maWxlLW9m/LXlvdW5nLXdvbWFu/cy1mYWNlLmpwZz9z/PTYxMng2MTImdz0w/Jms9MjAmYz1GQjIy/UmIwM3NZZkNiTl9M/MmNoQ2psNHVTN2JU/VTdWN1U5WEUySEZx/SFpRPQ" alt="Itsuki Takahashi">
             <h3>Itsuki Takahashi</h3>
             <p>Digital Illustrator and Author</p>
         </div>
@@ -362,6 +573,90 @@
         </div>
     </div>
     
+    
+      <!-- footer -->
+<footer class="footer-section">
+    <div class="footer-content">
+        <!-- Hire Talent Column -->
+        <div class="footer-column column-one">
+            <h3>Hire Talent</h3>
+            <hr class="footer-header-divider">
+            <ul>
+                <li><a href="developer.html">Hire Freelance Developers</a></li>
+                <li><a href="designer.html">Hire Freelance Designers</a></li>
+                <li><a href="marketingexperts.html">Hire Freelance Marketers</a></li>
+                <li><a href="productmanagers.html">Hire Freelance Product Managers</a></li>
+                <li><a href="projectmanager.html">Hire Freelance Project Managers</a></li>
+                <li><a href="financeexperts.html">Hire Freelance Finance Experts</a></li>
+            </ul>
+        </div>
+ 
+        <!-- Featured Design Skills Column -->
+        <div class="footer-column column-two">
+            <h3>Featured Design Skills</h3>
+            <hr class="footer-header-divider">
+            <div class="skills-grid">
+                <ul>
+                    <li><a href="#">UX Designers</a></li>
+                    <li><a href="#">UI Designers</a></li>
+                    <li><a href="#">Web Designers</a></li>
+                    <li><a href="#">Mobile App Designers</a></li>
+                    <li><a href="#">Graphic Designers</a></li>
+                    <li><a href="#">Brand Designers</a></li>
+                    <li><a href="#">UX Strategists</a></li>
+                    <li><a href="#">3D Animators</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Adobe After Effects Designers</a></li>
+                    <li><a href="#">Adobe Illustrator Experts</a></li>
+                    <li><a href="#">Creative Directors</a></li>
+                    <li><a href="#">Data Visualization Designers</a></li>
+                    <li><a href="#">E-commerce Designers</a></li>
+                    <li><a href="#">Illustrators</a></li>
+                    <li><a href="#">Landing Page Designers</a></li>
+                    <li><a href="#">Logo Designers</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Mobile UX Designers</a></li>
+                    <li><a href="#">Presentation Designers</a></li>
+                    <li><a href="#">Product Designers</a></li>
+                    <li><a href="#">SaaS Designers</a></li>
+                    <li><a href="#">UI/UX Designers</a></li>
+                    <li><a href="#">UX Researchers</a></li>
+                    <li><a href="#">Webflow Designers</a></li>
+                    <li><a href="#">WordPress Designers</a></li>
+                </ul>
+            </div>
+        </div>
+ 
+        <!-- About Column -->
+        <div class="footer-column column-three">
+            <h3>About</h3>
+            <hr class="footer-header-divider">
+            <ul>
+                <li><a href="#">Why SkillSync</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Press Center</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Community</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+        </div>
+    </div>
+ 
+    <!-- Footer Bottom -->
+    <hr class="footer-divider">
+    <div class="footer-bottom">
+        <p>&copy; 2010 - 2024 SkillSync, LLC | <a href="#">Privacy Policy</a> | <a href="#">Website Terms</a> | <a href="#">Accessibility</a></p>
+        <div class="social-icons">
+            <a href="#"><img src="https://imgs.search.brave.com/GpB5WQlesvec2MXDXDV3SmKb0pzSJzyH667WAzbxGcs/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy9j/L2NhL0xpbmtlZElu/X2xvZ29faW5pdGlh/bHMucG5n" alt="LinkedIn"></a>
+            <a href="#"><img src="https://imgs.search.brave.com/NQajyYj4Et3aaG0UGww0YbGbIZhXry6KAfk8SID3RXI/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/bW9zLmNtcy5mdXR1/cmVjZG4ubmV0L3oz/Ym42ZGVheG1yam1R/SE5Fa3BjWkUtMzIw/LTgwLmpwZw" alt="Twitter"></a>
+            <a href="#"><img src="https://imgs.search.brave.com/8dKir7rWy4ZIZW57ujo65GV7C-KX7S1wbyVOcIzmYOk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAzLzAwLzI0LzU5/LzM2MF9GXzMwMDI0/NTk1M19TdmloMURZ/SmJ3NHYydDkyRWhE/T1R3VzRMSXFNZ2ht/eS5qcGc" alt="Facebook"></a>
+            <a href="#"><img src="https://imgs.search.brave.com/sJqihmnn5oUkfb5hKhqnVCbEMZ-X4WWrRROiv3z4-Eg/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pLmd1/aW0uY28udWsvaW1n/L21lZGlhLzIyZTMy/YzFiMWRlNDBlZDcx/MDNlMmUyZTg5OTVi/NzQyYWM2MDBiZDYv/NzBfMF83MTdfNDMw/L21hc3Rlci83MTcu/anBnP3dpZHRoPTQ0/NSZkcHI9MSZzPW5v/bmU" alt="Instagram"></a>
+        </div>
+    </div>
+ </footer>
     
 
     <!-- ScrollReveal Script -->
