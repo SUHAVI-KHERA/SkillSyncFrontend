@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freelancer Proposal</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-white">
+    <div class="container mx-auto py-12">
+        <div class="max-w-3xl mx-auto bg-white p-8 rounded shadow-md">
+            <h1 class="text-3xl font-bold text-black mb-4">Project Proposal</h1>
+
+            <!-- Introduction Section -->
+            <div class="mb-6">
+                <h2 class="text-xl font-semibold text-black mb-2">Introduction</h2>
+                <p class="text-black">Dear [Client Name],</p>
+                <p class="text-black">My name is [Your Name], and I am a [Your Title/Expertise] with [X] years of experience in [Relevant Field]. I am writing to propose my services for [Project Name or Brief Description].</p>
+            </div>
+
+            <!-- Projects Worked On -->
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold mb-2">Projects Worked On</h3>
+                <div id="projects-container" class="space-y-4">
+                    <!-- Projects will be added here -->
+                </div>
+                <button type="button" class="mt-2 bg-red-500 hover:bg-red-800 text-white px-4 py-2 rounded" onclick="addProject()">Add Project</button>
+            </div>
+
+            <!-- Project Timeline Section -->
+            <div class="mb-6">
+                <h2 class="text-xl font-semibold text-black mb-2">Project Timeline</h2>
+                <p class="text-black">The estimated timeline for this project is as follows:</p>
+                <ul class="list-disc list-inside text-black">
+                    <li>Phase 1: [Timeframe] - Description of phase 1.</li>
+                    <li>Phase 2: [Timeframe] - Description of phase 2.</li>
+                    <li>Phase 3: [Timeframe] - Description of phase 3.</li>
+                </ul>
+            </div>
+
+            <!-- Estimated Budget -->
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold mb-2">Estimated Budget</h3>
+                <input type="text" id="estimatedBudget" placeholder="Enter estimated budget" class="w-full px-4 py-2 border rounded">
+            </div>
+
+            <!-- Call-to-Action Section -->
+            <div class="mb-6">
+                <h2 class="text-xl font-semibold text-black mb-2">Next Steps</h2>
+                <p class="text-black">If you are happy with this proposal, please let me know, and we can discuss the next steps in moving forward. I am available to start the project on [Start Date].</p>
+                <p class="text-black">Thank you for considering my proposal. I look forward to the possibility of working together.</p>
+            </div>
+
+            <!-- Contact Information Section -->
+            <div class="mt-8">
+                <h2 class="text-xl font-semibold text-black mb-2">Contact Information</h2>
+                <p class="text-black">[Your Name]</p>
+                <p class="text-black">[Your Email Address]</p>
+                <p class="text-black">[Your Phone Number]</p>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="flex justify-end mt-6">
+                <button class="bg-red-500 hover:bg-red-800 text-white font-bold py-2 px-4 rounded" onclick="submitProposal()">Submit Proposal</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-4 right-4 bg-green-500 text-white p-4 rounded shadow-lg opacity-0 transition-opacity duration-500">
+        <span id="toastMessage">Your proposal has been submitted successfully!</span>
+    </div>
+
+    <script>
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const toastMessage = document.getElementById('toastMessage');
+            toastMessage.textContent = message;
+            toast.classList.remove('opacity-0');
+            toast.classList.add('opacity-100');
+            setTimeout(() => {
+                toast.classList.remove('opacity-100');
+                toast.classList.add('opacity-0');
+            }, 3000);
+        }
+
+        function submitProposal() {
+            showToast("Your proposal has been submitted successfully!");
+        }
+
+        function addProject() {
+            const projectsContainer = document.getElementById('projects-container');
+            const projectDiv = document.createElement('div');
+            projectDiv.className = 'project';
+
+            projectDiv.innerHTML = `
+                <div class="p-4 border rounded bg-gray-50">
+                    <label class="block text-gray-700 font-semibold mb-1" for="projectTitle">Project Title</label>
+                    <input type="text" id="projectTitle" placeholder="Project Title" class="w-full px-4 py-2 mb-4 border rounded">
+                    
+                    <label class="block text-gray-700 font-semibold mb-1" for="projectDescription">Project Description</label>
+                    <textarea id="projectDescription" placeholder="Describe the project" class="w-full px-4 py-2 mb-4 border rounded"></textarea>
+                    
+                    <button type="button" class="bg-red-500 hover:bg-red-700 text-white px-4 py-2 rounded" onclick="removeProject(this)">Remove Project</button>
+                </div>
+            `;
+
+            projectsContainer.appendChild(projectDiv);
+            showToast('Project added successfully!');
+        }
+
+        function removeProject(button) {
+            const projectDiv = button.parentElement;
+            projectDiv.remove();
+            showToast('Project removed successfully!');
+        }
+    </script>
+</body>
+
+</html>

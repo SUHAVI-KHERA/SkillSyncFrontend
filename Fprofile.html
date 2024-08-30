@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio of Freelancer</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .tag {
+            display: inline-flex;
+            align-items: center;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            border-radius: 9999px;
+            padding: 0.25rem 0.5rem;
+            margin: 0.25rem;
+            font-size: 0.875rem;
+            white-space: nowrap;
+        }
+        .tag button {
+            background: none;
+            border: none;
+            margin-left: 0.25rem;
+            cursor: pointer;
+            color: #cbd5e0;
+            font-size: 1.25rem;
+        }
+        .social-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            font-size: 1rem;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .google {
+            background-color: #4285F4;
+        }
+        .linkedin {
+            background-color: #0077B5;
+        }
+        .google:hover {
+            background-color: #357ae8;
+        }
+        .linkedin:hover {
+            background-color: #006097;
+        }
+        /* .social-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            font-size: 1rem;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        } */
+        /* .google {
+            background-color: #4285F4;
+        }
+        .linkedin {
+            background-color: #0077B5;
+        }
+        .google:hover {
+            background-color: #357ae8;
+        }
+        .linkedin:hover {
+            background-color: #006097;
+        } */
+    </style>
+</head>
+<body class="bg-white">
+    <div class="container  mx-auto m-10">
+        <div class="max-w-2xl mx-auto bg-white p-8 rounded border-2 border-solid border-black border-opacity-5 shadow">
+            <h2 class="text-2xl font-bold mb-6 text-black">Edit Portfolio</h2>
+
+            <!-- Profile Picture -->
+            <div class="mb-4">
+                <label class="block text-black font-bold mb-2" for="profilePic">Profile Picture</label>
+                <div class="flex items-center">
+                    <img id="profilePicPreview" class="w-24 h-24 rounded-full mr-4" src="https://via.placeholder.com/150" alt="Profile Picture">
+                    <input type="file" id="profilePic" class="hidden" accept="image/*" onchange="previewProfilePic(event)">
+                    <button type="button" class="bg-red-500 hover:bg-red-800 text-white px-4 py-2 rounded" onclick="document.getElementById('profilePic').click()">Change Picture</button>
+                </div>
+            </div>
+
+            <!-- Name -->
+            <div class="mb-4">
+                <label class="block text-black font-bold mb-2" for="name">Name</label>
+                <input type="text" id="name" placeholder="Enter your name" class="w-full p-3 border rounded">
+            </div>
+
+            <!-- Email -->
+            <div class="mb-4">
+                <label class="block text-black font-bold mb-2" for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email" class="w-full p-3 border rounded">
+            </div>
+
+            <!-- Bio -->
+            <div class="mb-4">
+                <label class="block text-black font-bold mb-2" for="bio">Bio</label>
+                <textarea id="bio" placeholder="Tell us about yourself" class="w-full p-3 border rounded"></textarea>
+            </div>
+    
+            <!-- Skills Section -->
+            <div class="mb-4">
+                <label class="block text-black font-bold mb-2" for="skills">Skills</label>
+                <div id="skills-container" class="flex flex-wrap gap-2 mb-2">
+                    <!-- Tags will appear here -->
+                </div>
+                <input type="text" id="skills" placeholder="e.g., JavaScript, Python, Design" class="w-full p-3 border rounded focus:outline-none focus:ring-2 focus:ring-black" onkeypress="addSkill(event)">
+            </div>
+             
+    <!-- Experience -->
+            <div class="mb-4">
+                <label class="block text-black font-bold mb-2" for="experience">Experience</label>
+                <textarea id="experience" placeholder="Describe your professional experience" class="w-full p-3 border rounded"></textarea>
+            </div>
+
+            <!-- Availability -->
+            <div class="mb-4">
+                <label class="block text-black font-bold mb-2">Availability</label>
+                <div class="flex items-center">
+                    <input type="radio" id="fulltime" name="availability" value="Full-time" class="mr-2">
+                    <label for="fulltime" class="mr-4">Full-time</label>
+                    <input type="radio" id="parttime" name="availability" value="Part-time" class="mr-2">
+                    <label for="parttime" class="mr-4">Part-time</label>
+                    <input type="radio" id="freelancer" name="availability" value="Freelancer" class="mr-2">
+                    <label for="freelancer">Freelancer</label>
+                </div>
+            </div>
+             <!-- Charges Per Hour Section -->
+            <div class="mb-4">
+                <label class="block text-black font-bold mb-2" for="charges">Charges Per Hour</label>
+                <input type="text" id="charges" placeholder="e.g., $50" class="w-full p-3 border rounded focus:outline-none focus:ring-2 focus:ring-black">
+            </div>
+
+             <!-- Projects Section -->
+             <div class="mb-4">
+                <label class="block text-black font-bold mb-2" for="projects">Projects</label>
+                <div id="projects-container" class="mb-2">
+                    <!-- Project inputs will appear here -->
+                </div>
+                <button type="button" class="bg-red-500 hover:bg-red-800 text-white px-4 py-2 rounded" onclick="addProject()">Add Project</button>
+            </div>
+
+            <!-- Certificates Section -->
+            <div class="mb-4">
+                <label class="block text-black font-bold mb-2" for="certificates">Certificates</label>
+                <div id="certificates-container" class="mb-2">
+                    <!-- Certificate inputs will appear here -->
+                </div>
+                <button type="button" class="bg-red-500 hover:bg-red-800 text-white px-4 py-2 rounded" onclick="addCertificate()">Add Certificate</button>
+            </div>
+              <!-- LinkedIn Profile Field -->
+        <div class="mb-4">
+            <label class="block text-black font-bold mb-2" for="linkedin">LinkedIn Profile</label>
+            <input type="url" id="linkedin" placeholder="https://www.linkedin.com/in/yourprofile" class="w-full p-3 border rounded focus:outline-none focus:ring-2 focus:ring-black">
+        </div>
+
+        <!-- GitHub Profile Field -->
+        <div class="mb-4">
+            <label class="block text-black font-bold mb-2" for="github">GitHub Profile</label>
+            <input type="url" id="github" placeholder="https://github.com/yourusername" class="w-full p-3 border rounded focus:outline-none focus:ring-2 focus:ring-black">
+        </div>
+             <!-- Submit Button -->
+            <div class="flex justify-end">
+                <button class="bg-red-500 hover:bg-red-800 text-white px-6 py-2 rounded" onclick="submitProfile()">Save Changes</button>
+            </div>
+
+          
+        </div>
+    </div>
+    
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-4 right-4 bg-green-500 text-white p-4 rounded shadow-lg opacity-0 transition-opacity duration-500">
+        Profile updated successfully!
+    </div>
+
+    <!-- JavaScript code -->
+    <script>
+        function previewProfilePic(event) {
+            const reader = new FileReader();
+            reader.onload = function() {
+                const output = document.getElementById('profilePicPreview');
+                output.src = reader.result;
+            };
+            reader.readAsDataURL(event.target.files[0]);
+        }
+
+        function submitProfile() {
+            const toast = document.getElementById('toast');
+            toast.classList.remove('opacity-0');
+            toast.classList.add('opacity-100');
+            setTimeout(() => {
+                toast.classList.remove('opacity-100');
+                toast.classList.add('opacity-0');
+            }, 3000);
+        }
+    </script>
+    <!-- JavaScript for handling skills input and tags -->
+    <script>
+        function addSkill(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault(); // Prevent the default action of the Enter key
+                const input = document.getElementById('skills');
+                const skill = input.value.trim();
+
+                if (skill && !isDuplicateSkill(skill)) {
+                    const container = document.getElementById('skills-container');
+                    const tag = document.createElement('div');
+                    tag.className = 'tag';
+                    tag.textContent = skill;
+
+                    const removeButton = document.createElement('button');
+                    removeButton.textContent = '×';
+                    removeButton.onclick = function() {
+                        container.removeChild(tag);
+                    };
+
+                    tag.appendChild(removeButton);
+                    container.appendChild(tag);
+                    input.value = '';
+                }
+            }
+        }
+
+        function isDuplicateSkill(skill) {
+            const tags = document.querySelectorAll('#skills-container .tag');
+            for (let tag of tags) {
+                if (tag.textContent.replace('×', '').trim() === skill) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+         // JavaScript for handling projects input
+         function addProject() {
+            const container = document.getElementById('projects-container');
+            const projectInput = document.createElement('input');
+            projectInput.type = 'text';
+            projectInput.placeholder = 'Project Name';
+            projectInput.className = 'w-full p-3 border rounded mb-2';
+            container.appendChild(projectInput);
+        }
+
+       // JavaScript for handling certificates input
+
+       function addCertificate() {
+            const container = document.getElementById('certificates-container');
+            const certificate = document.createElement('div');
+            certificate.className = 'certificate flex items-center gap-4';
+            certificate.innerHTML = `
+                <input type="text" placeholder="Certificate Name" class="w-full p-3 border rounded mb-2">
+                <input type="file" class="hidden" accept="image/*" onchange="previewCertificatePhoto(event, this)">
+                <button type="button" class="bg-red-500 text-white px-4 py-2 rounded cursor-pointer hover:bg-red-700" onclick="this.previousElementSibling.click()">Change Certificate Photo</button>
+            `;
+            container.appendChild(certificate);
+        }
+
+        function previewCertificatePhoto(event, input) {
+            const reader = new FileReader();
+            reader.onload = function() {
+                const img = document.createElement('img');
+                img.src = reader.result;
+                img.className = 'w-24 h-24 rounded-full';
+                input.parentElement.appendChild(img);
+            };
+            reader.readAsDataURL(event.target.files[0]);
+        }
+        
+
+        function submitProfile() {
+            const toast = document.getElementById('toast');
+            toast.classList.remove('opacity-0');
+            toast.classList.add('opacity-100');
+            setTimeout(() => {
+                toast.classList.remove('opacity-100');
+                toast.classList.add('opacity-0');
+            }, 3000);
+        }
+    //    function addCertificate() {
+    //         const container = document.getElementById('certificates-container');
+
+            // Create a container for each certificate
+            // const certificateContainer = document.createElement('div');
+            // certificateContainer.className = 'mb-2';
+
+            // Create the certificate name input
+            // const certificateInput = document.createElement('input');
+            // certificateInput.type = 'text';
+            // certificateInput.placeholder = 'Certificate Name';
+            // certificateInput.className = 'w-full p-3 border rounded mb-2';
+
+            // Create the image preview and input
+            // const imageContainer = document.createElement('div');
+            // imageContainer.className = 'flex items-center';
+
+            // const imagePreview = document.createElement('img');
+            // imagePreview.className = 'w-24 h-24 rounded mr-4';
+            // imagePreview.src = 'https://via.placeholder.com/150';
+
+            // const imageInput = document.createElement('input');
+            // imageInput.type = 'file';
+            // imageInput.className = 'hidden';
+            // imageInput.accept = 'image/*';
+            // imageInput.onchange = function(event) {
+            //     const reader = new FileReader();
+            //     reader.onload = function() {
+            //         imagePreview.src = reader.result;
+            //     };
+            //     reader.readAsDataURL(event.target.files[0]);
+            // };
+
+        //     const changeImageButton = document.createElement('button');
+        //     changeImageButton.type = 'button';
+        //     changeImageButton.className = 'bg-blue-500 text-white px-4 py-2 rounded';
+        //     changeImageButton.textContent = 'Change Certificate Image';
+        //     changeImageButton.onclick = function() {
+        //         imageInput.click();
+        //     };
+
+        //     imageContainer.appendChild(imagePreview);
+        //     imageContainer.appendChild(imageInput);
+        //     imageContainer.appendChild(changeImageButton);
+
+        //     certificateContainer.appendChild(certificateInput);
+        //     certificateContainer.appendChild(imageContainer);
+        //     container.appendChild(certificateContainer);
+        // }
+    </script>
+ 
+</body>
+</html>
+

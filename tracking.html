@@ -1,0 +1,57 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Tracking</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-white">
+
+    <!-- Project Tracking Interface -->
+     <div class="container mx-auto py-12">
+        <div class="max-w-lg mx-auto bg-white p-8 rounded shadow-md border-2 border-solid border-black border-opacity-5">
+            <h2 class="text-2xl font-bold mb-6">Project Milestones</h2>
+            <ul id="milestoneList" class="space-y-4">
+                <li class="flex justify-between items-center">
+                    <span>Project Setup</span>
+                    <button class="bg-gray-600 text-white px-4 py-2 rounded" onclick="markComplete(0)">Mark Complete</button>
+                </li>
+                <li class="flex justify-between items-center">
+                    <span>Development Phase 1</span>
+                    <button class="bg-gray-600 text-white px-4 py-2 rounded" onclick="markComplete(1)">Mark Complete</button>
+                </li>
+                <li class="flex justify-between items-center">
+                    <span>Development Phase 2</span>
+                    <button class="bg-gray-600 text-white px-4 py-2 rounded" onclick="markComplete(2)">Mark Complete</button>
+                </li>
+                <li class="flex justify-between items-center">
+                    <span>Development Phase 3</span>
+                    <button class="bg-gray-600 text-white px-4 py-2 rounded" onclick="markComplete(3)">Mark Complete</button>
+                </li>
+                <li class="flex justify-between items-center">
+                    <span>Testing</span>
+                    <button class="bg-gray-600 text-white px-4 py-2 rounded" onclick="markComplete(4)">Mark Complete</button>
+                </li>
+                <li class="flex justify-between items-center">
+                    <span>Deployment</span>
+                    <button class="bg-gray-600 text-white px-4 py-2 rounded" onclick="markComplete(5)">Mark Complete</button>
+                </li>
+            </ul>
+        </div>
+    </div> 
+
+     <script>
+        //   Mark Milestones as Complete 
+        function markComplete(index) {
+            const buttons = document.querySelectorAll('#milestoneList button');
+            buttons[index].textContent = 'Completed';
+            buttons[index].classList.remove('bg-gray-600');
+            buttons[index].classList.add('bg-green-600');
+            buttons[index].disabled = true;
+        }
+    </script>
+</body>
+</html> 
+
+
