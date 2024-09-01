@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif; /* Basic but slightly bold font */
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333; /* Dark grey heading */
+            margin-bottom: 20px;
+            font-weight: bold;
+            font-size: 2.5em; /* Increased font size */
+        }
+
+        .project-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .profile-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px; /* Increased padding for better spacing */
+            margin: 20px 0;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: all 0.3s ease;
+            font-size: 1.2em; /* Bigger font size for content */
+        }
+
+        .profile-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            background-color: #fce4ec; /* Pinkish hover color */
+        }
+
+        .project-title {
+            font-size: 2em; /* Bigger font size */
+            margin: 0 0 10px;
+            color: #333333; /* Dark grey heading */
+            font-weight: bold;
+        }
+
+        .project-details {
+            font-size: 1.1em; /* Bigger font size */
+            color: #888888; /* Light grey paragraph */
+            margin: 5px 0;
+            font-weight: 500;
+        }
+
+        .project-details p {
+            margin: 5px 0;
+        }
+
+        .project-details span {
+            color: #555; 
+            font-weight: 600;
+        }
+
+        .received-proposals {
+            color: #FF4500; /* Orangish red color */
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 10px;
+            display: inline-block;
+            font-size: 1.2em; /* Bigger font size */
+        }
+
+        .received-proposals:hover {
+            text-decoration: underline;
+        }
+
+        .proposal-details {
+            margin-top: 10px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: none; /* Initially hidden */
+            text-align: left; /* Left-align proposal details */
+        }
+
+        .proposal-item {
+            border: 1px solid #ccc; /* Grey border */
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 10px;
+            background-color: #f2f2f2; /* Light grey background */
+            position: relative;
+        }
+
+        .proposal-item h4 {
+            margin: 0 0 5px;
+            color: #333;
+            font-weight: bold;
+            font-size: 1.3em; /* Bigger font size */
+        }
+
+        .proposal-item p {
+            margin: 0;
+            font-size: 1em; /* Bigger font size */
+            color: #555;
+        }
+
+        .proposal-item p span {
+            font-weight: bold;
+        }
+
+        .view-full-proposal {
+            color: white;
+            background-color: #FF4500; /* Reddish orange color */
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            font-size: 1em; /* Button font size */
+        }
+
+        .view-full-proposal:hover {
+            background-color: #e63900; /* Darker reddish-orange on hover */
+        }
+    </style>
+</head>
+<body>
+
+<h2>My Projects</h2>
+
+<div class="project-container">
+    <div class="profile-card">
+        <h3 class="project-title">Project: Financial Model Development</h3>
+        <p class="project-details"><strong>Proposal Title:</strong> <span>Comprehensive Financial Modeling</span></p>
+        <p class="project-details"><strong>Description:</strong> <span>Develop a comprehensive financial model for a start-up, covering revenue projections, expense forecasting, and cash flow management.</span></p>
+        <p class="project-details"><strong>Type:</strong> <span>Freelance Project</span></p>
+        <p class="project-details"><strong>Skills Required:</strong> <span>Financial Modeling, Accounting, Excel, FP&A</span></p>
+        <p class="project-details"><strong>Estimated Budget:</strong> <span>$5,000 - $7,000</span></p>
+        <p class="project-details"><strong>Deadline:</strong> <span>September 30, 2024</span></p>
+        <a href="#" class="received-proposals" onclick="showProposals(event, 'proposal1')">Received Proposals</a>
+        <div id="proposal1" class="proposal-details">
+            <div class="proposal-item">
+                <h4>Proposal 1</h4>
+                <p><strong>Name:</strong> <span>John Doe</span></p>
+                <p><strong>Description:</strong> <span>I will develop a detailed financial model with all necessary projections.</span></p>
+                <p><strong>Estimated Time:</strong> <span>2 weeks</span></p>
+                <p><strong>Proposed Budget:</strong> <span>$6,000</span></p>
+                <a href="#" class="view-full-proposal">View Full Proposal</a>
+            </div>
+            <div class="proposal-item">
+                <h4>Proposal 2</h4>
+                <p><strong>Name:</strong> <span>Jane Smith</span></p>
+                <p><strong>Description:</strong> <span>I specialize in financial modeling for startups and can deliver a high-quality model.</span></p>
+                <p><strong>Estimated Time:</strong> <span>3 weeks</span></p>
+                <p><strong>Proposed Budget:</strong> <span>$6,500</span></p>
+                <a href="#" class="view-full-proposal">View Full Proposal</a>
+            </div>
+            <div class="proposal-item">
+                <h4>Proposal 3</h4>
+                <p><strong>Name:</strong> <span>Mike Johnson</span></p>
+                <p><strong>Description:</strong> <span>My approach includes detailed cash flow management and expense forecasting.</span></p>
+                <p><strong>Estimated Time:</strong> <span>2.5 weeks</span></p>
+                <p><strong>Proposed Budget:</strong> <span>$5,800</span></p>
+                <a href="#" class="view-full-proposal">View Full Proposal</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="profile-card">
+        <h3 class="project-title">Project: Financial Model Development</h3>
+        <p class="project-details"><strong>Proposal Title:</strong> <span>Comprehensive Financial Modeling</span></p>
+        <p class="project-details"><strong>Description:</strong> <span>Develop a comprehensive financial model for a start-up, covering revenue projections, expense forecasting, and cash flow management.</span></p>
+        <p class="project-details"><strong>Type:</strong> <span>Freelance Project</span></p>
+        <p class="project-details"><strong>Skills Required:</strong> <span>Financial Modeling, Accounting, Excel, FP&A</span></p>
+        <p class="project-details"><strong>Estimated Budget:</strong> <span>$5,000 - $7,000</span></p>
+        <p class="project-details"><strong>Deadline:</strong> <span>September 30, 2024</span></p>
+        <a href="#" class="received-proposals" onclick="showProposals(event, 'proposal1')">Received Proposals</a>
+        <div id="proposal1" class="proposal-details">
+            <div class="proposal-item">
+                <h4>Proposal 1</h4>
+                <p><strong>Name:</strong> <span>John Doe</span></p>
+                <p><strong>Description:</strong> <span>I will develop a detailed financial model with all necessary projections.</span></p>
+                <p><strong>Estimated Time:</strong> <span>2 weeks</span></p>
+                <p><strong>Proposed Budget:</strong> <span>$6,000</span></p>
+                <a href="#" class="view-full-proposal">View Full Proposal</a>
+            </div>
+            <div class="proposal-item">
+                <h4>Proposal 2</h4>
+                <p><strong>Name:</strong> <span>Jane Smith</span></p>
+                <p><strong>Description:</strong> <span>I specialize in financial modeling for startups and can deliver a high-quality model.</span></p>
+                <p><strong>Estimated Time:</strong> <span>3 weeks</span></p>
+                <p><strong>Proposed Budget:</strong> <span>$6,500</span></p>
+                <a href="#" class="view-full-proposal">View Full Proposal</a>
+            </div>
+            <div class="proposal-item">
+                <h4>Proposal 3</h4>
+                <p><strong>Name:</strong> <span>Mike Johnson</span></p>
+                <p><strong>Description:</strong> <span>My approach includes detailed cash flow management and expense forecasting.</span></p>
+                <p><strong>Estimated Time:</strong> <span>2.5 weeks</span></p>
+                <p><strong>Proposed Budget:</strong> <span>$5,800</span></p>
+                <a href="#" class="view-full-proposal">View Full Proposal</a>
+            </div>
+        </div>
+    </div>
+    <!-- Repeat the above block for more projects if needed -->
+</div>
+
+<script>
+    function showProposals(event, proposalId) {
+        event.preventDefault();
+        var proposals = document.getElementById(proposalId);
+        if (proposals.style.display === "none" || proposals.style.display === "") {
+            proposals.style.display = "block";
+        } else {
+            proposals.style.display = "none";
+        }
+    }
+</script>
+
+</body>
+</html>

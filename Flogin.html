@@ -23,9 +23,15 @@
         </div>
 
         <!-- Submit Button -->
-        <div class="flex justify-between items-center">
+        <div class="flex justify-between items-center mb-4">
             <button class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-800" onclick="login()">Login</button>
             <a href="forgetpassword.html" class="text-red-500 hover:underline">Forgot password?</a>
+        </div>
+
+        <!-- Sign Up Link -->
+        <div class="flex justify-between items-center mb-4">
+            <span class="text-black">Don't have an account?</span>
+            <a href="Fsignup.html" class="text-red-500 hover:underline text-end">Create account</a>
         </div>
 
         <!-- Toast Notification -->
@@ -85,12 +91,8 @@
             setTimeout(() => {
                 toast.classList.remove('opacity-100');
                 toast.classList.add('opacity-0');
-            }, 3000);
+            }, 1000);
         }
     </script>
 </body>
 </html>
-
-
-
-

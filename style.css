@@ -5,39 +5,26 @@ body, html {
     font-family: "Lora", serif;
     /* font-family: Arial, sans-serif; */
 }
-
+.skillsync {
+    font-family: 'Merienda', cursive;
+    background-color: #e0e0e0; /* Light grey background */
+    padding: 15px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 9px 6px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+.skillsync h1 {
+    color: #333; /* Darker grey text */
+    font-size: 2em;
+    margin: 0;
+}
 body {
     background: url('https://imgs.search.brave.com/r-FQSVskWUyeN_WyYPt3BJ6yh3uh5fITbizlABVr2Bw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAxNi8w/My8yNi8xMy8wOS93/b3Jrc3BhY2UtMTI4/MDUzOF82NDAuanBn') no-repeat center center fixed; 
     background-size: cover;
     color: #fff;
 }
 
-header {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
-    padding: 10px 0;
-    z-index: 1000;
-}
-
-.navbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 1200px;
-    margin: auto;
-}
-
-.logo {
-    font-size: 30px;
-    font-family: "Merienda", cursive;
-    font-weight: bold;
-    color: #000; 
-    margin-right: auto; 
-}
 
 .header-content {
     text-align: left;

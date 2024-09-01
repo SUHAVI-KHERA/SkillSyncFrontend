@@ -255,19 +255,7 @@
     font-family: "Lora", serif;
 }
 
-.navbar {
-    padding: 20px;
-    background-color: transparent;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    font-family: "Merienda", cursive;
-}
 
 .hero-section {
     display: flex;
@@ -323,7 +311,139 @@ button {
     cursor: pointer;
     margin-top: 20px;
 }
+ /* General trusted section styles */
+ .trusted-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
 
+.trusted-section h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.trusted-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+.trusted-card-1 {
+    background-image: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgICA0HBwgIBwcHCA0HBwcHBw8ICQcNFREWFhUREx8YHSggGBolJxMTITEhJSkrLi4uFx8zODMsNygtLisBCgoKDg0NDw0NDysZFRkrKzcrLS03LS0rKy0rNysrKzcrKysrNysrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIALcBEwMBIgACEQEDEQH/xAAYAAEBAQEBAAAAAAAAAAAAAAACAQADB//EABYQAQEBAAAAAAAAAAAAAAAAAAABEf/EABkBAAMBAQEAAAAAAAAAAAAAAAABAwIEBv/EABgRAQEBAQEAAAAAAAAAAAAAAAABAhES/9oADAMBAAIRAxEAPwDyGQpGhSOS16DOWkKRZCkZWzlJCkWQpCWmUkLGkKQKzKYshSLgbmRxcLFwm5kcbCxcDXkMbDxsA8hjYeNgHkMTHTEwF5DEw8TAzchiY6WDhs3LnYljpYlgYuXOwbHSxLAncuVg2Otg2GlrLnYNjpYNjUqOsudg2Olg1qI6y54xMafHaFEkKRN2Ziwokhwl8xoUaFCVzGhRIUJWRorQgpIiqwakZsVg1xsZWB8RlYDgsrAuDiEwZsDEMQzYNiU6NhsWBYlh2DQnYFGnUsCWo52DYdGmjqOdGx0sGtRHUDGVmk+OsODDibrzFkKIUJbMWQokKBaRYsSFCUkaEkUNyKysG4zKwaZlQBmVAEZWBCysCsFCShmwEsJKGLBo2HRpp2BUpVKErAsGw6FNLUCwadGmjqBjKxpcdYcGHGXXmLCgw4S0WFEiwlZFhRIsCkWLEINxlRQ0zMoaZmYBmZgEZmAZFQMohICo1CShijRpVKE7AqUqNNOjQp0aEtQKNOhTQ0KKzSbtCgwow6clCgw4S0WFBhQKxYQwgpFWJFgbiszBpWZgbMzA2ZmAZFQEzMwJEVgyKElDNGjSqUMUaNKjTSo0aVGhLQ0KdGmjoGZjSdYUGFGXTkocCHCViwoMKBWLCGFApFixIsDcVmYNLGaMRszMZszMAzMwJGZgSMzAkSqgYopSo0MUaNOhTTo1KVGhKhRpUaaOhZmNJ0hQYUZXyUKDCgWhQoMWErCixIsCkKKihuKzMGljMwNmZgbMzAM1ZgSMzAkZmBIlVKGKlGrUoYo0aVGmnUo0qNCVCjSo00dCzMaRw4EKEtmnCgQoS0pQoMKErCiwYUCkVUWBuKqRQ1GVFDTMzA2ZmAZFQEzMwJGZAyw1UoZqVKo0MVKNKjTSo0aVGhLQ0aVGmjoWZjTKFKEKEpmnCgSlCWzThQIUJWU4sGLApKUKDFCkJkihqKqMGlZGBqyMAzMwJkVATIyBmsjIGalSrRpp1KNWpQnRqVaNCWqNGlQpo6qMjGmUpRzhyg805SgQoS2acKBClJaU4UCFCVlKKMXQpKSjqhqUlHWDXSZGB9VkbQOqjIB1UZAzayMgZtZK2oGbWo1aNpp2tRq0QnalGrRppaqUatGmjqojMafWlKVzlKUWFmukpSucpSsrZ06SlK5ylKFs6dJSlc5VlJWadJS1zlXSbmnTWlDV0NzR6uhraGvR62jraD9HqaOtoHotbQ1tBei1NHW0F6XW0dTTZul1NS1NDF0tqWpo6GLpbUqWjaad0to2taNoSumtG1rRtakR1ptYdY0+pKsqsbMqylKzM1WUpSlZmVZSlKVGCspausxKSrKuswb6utqsGutrazEOtqarGOprazAuprazAupqWswZtTU1mDFqaNqsbFo2jazBO0bUtRmolalo2qzSdo6zMafX/9k='); /* Background image for the first card */
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    width: 300px;
+    padding: 20px;
+    text-align: left;
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.trusted-card-2 {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_VEvYkdPckGZQZ9sO0vQNVwVxeIe-X1fZTQ&s'); /* Background image for the second card */
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    width: 300px;
+    padding: 20px;
+    text-align: left;
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.trusted-card-3 {
+    background-image: url('https://wallpapers.com/images/hd/plain-dark-green-wallpaper-qkfa2rem4fnm65ge.jpg'); /* Background image for the third card */
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    width: 300px;
+    padding: 20px;
+    text-align: left;
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover effect for cards */
+.trusted-card-1:hover,
+.trusted-card-2:hover,
+.trusted-card-3:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.trusted-logo img {
+    max-width: 100px;
+    margin-bottom: 20px;
+}
+
+.trusted-card-1 p,
+.trusted-card-2 p,
+.trusted-card-3 p {
+    margin: 10px 0;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #fff;
+}
+
+.author {
+    font-weight: bold;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    margin: 20px 0;
+}
+
+.results {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.result-item h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #fff;
+}
+
+.result-item p {
+    margin: 0;
+    font-size: 14px;
+    color: #eee;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    .trusted-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .trusted-card-1,
+    .trusted-card-2,
+    .trusted-card-3 {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
 /* cards */
 .profile-container {
   display: flex;
@@ -442,15 +562,15 @@ button {
 /* profiles */
 
 .container {
-    width: 80%;
-    margin: 20px auto;
+    width: 100%;
 }
 
 .profile-card {
     background-color: white;
     border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 20px;
+    padding: 10px;
+    margin: 20px;
+    margin-bottom: 50px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
@@ -525,21 +645,33 @@ button {
     font-weight: 600; 
 }
 
-
+.skillsync {
+    font-family: 'Merienda', cursive;
+    background-color: #e0e0e0; /* Light grey background */
+    padding: 15px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 9px 6px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+.skillsync h1 {
+    color: #333; /* Darker grey text */
+    font-size: 2em;
+    margin: 0;
+}
     </style>
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="logo">SkillSync</div>
+    <nav class="skillsync">
+        <h1>SkillSync</h1>
     </nav>
 
     <!-- Hero Section -->
     <div class="hero-section">
         <div class="content">
-            <h1>Connect with Top Freelancers</h1>
-            <p>SkillSync is a marketplace for top developers, designers, finance experts, marketing experts, product managers, and project managers. Top companies and start-ups hire freelancers from SkillSync for their most mission-critical projects.</p>
-            <button>Hire top Freelancers</button>
+            <h1>Connect with Top Companies as our Clients</h1>
+            <p>Leading organizations rely on SkillSync to connect with top-tier freelancers. Our experts help them tackle complex challenges, streamline operations, and bring their boldest visions to life.</p>
+            <!-- <button>Hire top Freelancers</button> -->
         </div>
     </div>
 
@@ -547,14 +679,14 @@ button {
     
 
     <!-- Profile Cards -->
-    <div class="profile-container">
+    <!-- <div class="profile-container">
         <div class="intro-text">
           <h2>Meet the top 3 companies that<br> excel in hiring talented<br> freelancers.</h2>
         </div>
         
         <div class="cards-container">
           <div class="card1">
-            <!-- <img src="path/to/first-image.png" alt="Company 1 Logo"> -->
+            <img src="path/to/first-image.png" alt="Company 1 Logo">
             <p>“Upwork enables us to differentiate ourselves from our competitors and produce content at a higher caliber.”</p>
             <p><strong>Josh Machiz, Chief Digital Officer</strong></p>
             <p>Emmy Winning Facebook Watch program</p>
@@ -562,22 +694,86 @@ button {
           </div>
           <div class="card2">
             <!-- <img src="path/to/second-image.png" alt="Company 2 Logo"> -->
-            <p>“Upwork enables us to differentiate ourselves from our competitors and produce content at a higher caliber.”</p>
+            <!-- <p>“Upwork enables us to differentiate ourselves from our competitors and produce content at a higher caliber.”</p>
             <p><strong>Josh Machiz, Chief Digital Officer</strong></p>
             <p>Emmy Winning Facebook Watch program</p>
             <p>Millions of impressions generated per client per IPO</p>
-          </div>
-          <div class="card3">
+          </div> -->
+          <!-- <div class="card3"> -->
             <!-- <img src="path/to/third-image.png" alt="Company 3 Logo"> -->
-            <p>“One of the advantages of utilizing freelancers is finding talent with different skills quickly as our needs change.”</p>
+            <!-- <p>“One of the advantages of utilizing freelancers is finding talent with different skills quickly as our needs change.”</p>
             <p><strong>Carol Taylor, Director of Content Experience</strong></p>
             <p>50% Faster launch of projects</p>
             <p>10,000 projects completed</p>
           </div>
         </div>
-      </div>
-      
+      </div> --> -->
+
+      <div class="trusted-section">
+        <h2>Trusted by leading brands and startups</h2>
+        <div class="trusted-cards">
+            <div class="trusted-card-1 bg-white ">
+                <div class="trusted-logo">
+                    <!-- <img src="" alt="Nasdaq Logo"> -->
+                </div>
+                <p>“Upwork enables us to differentiate ourselves from our competitors and produce content at a higher caliber.”</p>
+                <p class="author">Josh Machiz,Director of Product Experience</p>
+                <hr>
+                <div class="results">
+                    <div class="result-item">
+                        <h3>50% Faster</h3>
+                        <p>launch of projects</p>
+                    </div>
+                    <div class="result-item">
+                        <h3>10,000</h3>
+                        <p>projects completed</p>
+                    </div>
+                </div>
+            </div>
+            <div class="trusted-card-2">
+                <div class="trusted-logo">
+                    <!-- <img src="https://imgs.search.brave.com/DYJpq7esWBHEr7i5bZOLAECvTyLAt1YqDnaLn3oC8qM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/bG9nby53aW5lL2Ev/bG9nby9OYXNkYXEv/TmFzZGFxLUxvZ28u/d2luZS5zdmc" alt="Nasdaq Logo"> -->
+                </div>
+                <p>“One of the advantages of utilizing freelancers is finding talent with different skills quickly as our needs change.”</p>
+                <p class="author">Carol Taylor, Director of Content Experience</p>
+                <hr>
+                <div class="results">
+                    <div class="result-item">
+                        <h3>50% Faster</h3>
+                        <p>launch of projects</p>
+                    </div>
+                    <div class="result-item">
+                        <h3>10,000</h3>
+                        <p>projects completed</p>
+                    </div>
+                </div>
+            </div>
+            <div class="trusted-card-3">
+                <div class="trusted-logo">
+                    <!-- <img src="https://imgs.search.brave.com/DYJpq7esWBHEr7i5bZOLAECvTyLAt1YqDnaLn3oC8qM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/bG9nby53aW5lL2Ev/bG9nby9OYXNkYXEv/TmFzZGFxLUxvZ28u/d2luZS5zdmc" alt="Microsoft Logo"> -->
+                </div>
+                <p>““Leveraging Freelancers to Adapt Quickly to Evolving Project Requirements and Accessing Diverse Skill Sets.”</p>
+                <p class="author">Peter Hawks, Director of Engineering</p>
+                <hr>
+                <div class="results">
+                    <div class="result-item">
+                        <h3>50% Faster</h3>
+                        <p>launch of projects</p>
+                    </div>
+                    <div class="result-item">
+                        <h3>10,000</h3>
+                        <p>projects completed</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more trusted-card elements as needed -->
+        </div>
+    </div>
+
+    <div class="trusted-section">
+        <h2>Projects you can work on</h2>
     <!-- Project Proposal Page 1-->
+     <!-- <h2 class = "text-center justify-center items-center"> New Projects you can work on</h2> -->
 <div class="container">
     <!-- Profile Section -->
     <div class="profile-card">
@@ -601,7 +797,7 @@ button {
                 <span>Budgeting Consulting</span>
                 <!-- Add more skills as needed -->
             </div>
-            <button class="view-btn">View Proposal</button>
+            <button class="view-btn">Propose</button>
         </div>
     </div>
 </div>
@@ -630,7 +826,7 @@ button {
                 <span>Budgeting Consulting</span>
                 <!-- Add more skills as needed -->
             </div>
-            <button class="view-btn">View Proposal</button>
+            <button class="view-btn">Propose</button>
         </div>
     </div>
 </div>
@@ -659,7 +855,7 @@ button {
                 <span>Budgeting Consulting</span>
                 <!-- Add more skills as needed -->
             </div>
-            <button class="view-btn">View Proposal</button>
+            <button class="view-btn">Propose</button>
         </div>
     </div>
 </div>
@@ -688,7 +884,7 @@ button {
                 <span>Budgeting Consulting</span>
                 <!-- Add more skills as needed -->
             </div>
-            <button class="view-btn">View Proposal</button>
+            <button class="view-btn">Propose</button>
         </div>
     </div>
 </div>
@@ -717,7 +913,7 @@ button {
                 <span>Budgeting Consulting</span>
                 <!-- Add more skills as needed -->
             </div>
-            <button class="view-btn">View Proposal</button>
+            <button class="view-btn">Propose</button>
         </div>
     </div>
 </div>

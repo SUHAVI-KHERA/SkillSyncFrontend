@@ -10,19 +10,9 @@
     font-family: "Lora", serif;
 }
 
-.navbar {
-    padding: 20px;
-    background-color: transparent;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    font-family: "Merienda", cursive;
-}
+
+
 
 .hero-section {
     display: flex;
@@ -34,6 +24,20 @@
     background-size: cover;
     background-position: center;
     position: relative;
+}
+.skillsync {
+    font-family: 'Merienda', cursive;
+    background-color: #e0e0e0; /* Light grey background */
+    padding: 15px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 9px 6px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+.skillsync h1 {
+    color: #333; /* Darker grey text */
+    font-size: 2em;
+    margin: 0;
 }
 
 .hero-section::before {
@@ -498,17 +502,18 @@ button {
     </style>
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="logo">SkillSync</div>
+    <nav class="skillsync">
+        <h1>SkillSync</h1>
     </nav>
+
+    
 
     <!-- Hero Section -->
     <div class="hero-section">
         <div class="content">
             <h1>Connect with Top Freelancers</h1>
             <p>SkillSync is a marketplace for top developers, designers, finance experts, marketing experts, product managers, and project managers. Top companies and start-ups hire freelancers from SkillSync for their most mission-critical projects.</p>
-            <button>Hire top Freelancers</button>
+            <!-- <button>Hire top Freelancers</button> -->
         </div>
     </div>
 
@@ -550,7 +555,7 @@ button {
         </div>
 
         <div class="talent-grid">
-            <a href="#" class="talent-card">
+            <a href="developer.html" class="talent-card">
                 <div class="icon">
                     <img src="https://assets.toptal.io/images?url=https%3A%2F%2Ffrontier-assets.toptal.com%2F7027c187f96c0773.svg" alt="Developer Icon">
                 </div>
@@ -558,7 +563,7 @@ button {
                 <p>Seasoned software engineers, coders, and architects with expertise across hundreds of technologies.</p>
                 <span class="view-link">View More &rarr;</span>
             </a>
-            <a href="#" class="talent-card">
+            <a href="designer.html" class="talent-card">
                 <div class="icon">
                     <img src="https://assets.toptal.io/images?url=https%3A%2F%2Ffrontier-assets.toptal.com%2Fbc0547ba73046902.svg" alt="Designer Icon">
                 </div>
@@ -566,7 +571,7 @@ button {
                 <p>Expert UI, UX, Visual, and Interaction designers as well as a wide range of illustrators, animators, and more.</p>
                 <span class="view-link">View More &rarr;</span>
             </a>
-            <a href="#" class="talent-card">
+            <a href="financeexperts.html" class="talent-card">
                 <div class="icon">
                     <img src="https://assets.toptal.io/images?url=https%3A%2F%2Ffrontier-assets.toptal.com%2F5fcbbd7dd7e5d2e7.svg" alt="Finance Icon">
                 </div>
@@ -574,7 +579,7 @@ button {
                 <p>Experts in financial modeling & valuation, startup funding, interim CFO work, and market sizing.</p>
                 <span class="view-link">View More &rarr;</span>
             </a>
-            <a href="#" class="talent-card">
+            <a href="projectmanager.html" class="talent-card">
                 <div class="icon">
                     <img src="https://assets.toptal.io/images?url=https%3A%2F%2Ffrontier-assets.toptal.com%2F1d189a5352fbf3a6.svg" alt="Project Manager Icon">
                 </div>
@@ -582,7 +587,7 @@ button {
                 <p>Experienced in managing complex projects, delivering on time, within budget, and to the required quality.</p>
                 <span class="view-link">View More &rarr;</span>
             </a>
-            <a href="#" class="talent-card">
+            <a href="productmanagers.html" class="talent-card">
                 <div class="icon">
                     <img src="https://assets.toptal.io/images?url=https%3A%2F%2Ffrontier-assets.toptal.com%2Ffe1859a927e8aa7c.svg" alt="ProductManager Icon">
                 </div>
@@ -590,7 +595,7 @@ button {
                 <p>Experienced product managers skilled in leading cross-functional teams to develop, launch, and scale innovative products.</p>
                 <span class="view-link">View More &rarr;</span>
             </a>
-            <a href="#" class="talent-card">
+            <a href="marketingexperts.html" class="talent-card">
                 <div class="icon">
                     <img src="https://assets.toptal.io/images?url=https%3A%2F%2Ffrontier-assets.toptal.com%2F78d555213768e665.svg" alt="Marketing Icon">
                 </div>

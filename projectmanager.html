@@ -254,19 +254,6 @@
             /* font-family: Arial, sans-serif; */
         }
 
-        .navbar {
-            padding: 20px;
-            background-color: transparent;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            font-family: "Merienda", cursive;
-        }
 
         .hero-section {
             display: flex;
@@ -329,89 +316,7 @@
     font-weight: 700;
         }
 
-        .intro-text {
-            margin-top: 7%;
-        }
-
-        .intro-text h2 {
-            font-size: 34px;
-            text-align: left;
-            margin-bottom: 20px;
-            
-        }
-
-        .profile-container {
-            margin-top: 7%;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: right;
-            align-items: flex-start;
-            gap: 20px;
-            padding: 40px;
-        }
-
-        .profile-card {
-            text-align: center;
-            position: relative; /* Required for hover effect */
-        }
-
-        .profile-card {
-        text-align: center;
-        position: relative; /* Required for hover effect */
-        border: 2px solid transparent; /* Initial border */
-        transition: border-color 0.3s ease; /* Smooth transition for hover */
-        border-radius: 8px; /* Optional: to match the rounded corners of the image */
-    }
-      
-    .profile-card:hover {
-
-        border-color: #d1363e; /* Border color on hover */
-        border-width: 4px;
-    }   
-    .profile-card:hover img {
-            filter: grayscale(50%); /* Grayscale filter on hover */
-        }
-
-    .profile-card img {
-        width: 250px;
-        height:250px;
-        border-radius: 2px;
-    }
-
-
-        .profile-card h3 {
-            margin: 10px 0 5px;
-            font-size: 18px;
-        }
-
-        .profile-card p {
-            margin: 0;
-            font-size: 16px;
-            color: gray;
-        }
-
-        .view-more-container {
-            display: flex;
-            justify-content: right;
-            
-            width: 100%;
-        }
-
-        .view-more-button {
-            background-color:#d1363e;
-            color: #fff;
-            border: none;
-            padding: 5px 20px;
-            font-size: 16px;
-            margin-top: 2px; 
-            cursor: pointer;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        .view-more-button:hover {
-            background-color:#c9050f;
-        }
+       
 
       /* why are you hire */
       .skills-section {
@@ -489,54 +394,133 @@
     color:#c9050f; /* Change color on hover */
 }
 
+.intro-text {
+    margin-top: 7%;
+}
+
+.intro-text h2 {
+    font-size: 34px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.profile-container {
+    margin-top: 7%;
+    display: flex;
+    flex-wrap: nowrap; /* Keeps items in one row */
+    justify-content: space-between; /* Distributes space between items */
+    align-items: flex-start;
+    gap: 20px;
+    padding: 40px;
+    overflow-x: auto; /* Enables horizontal scrolling on smaller screens */
+}
+
+.profile-card {
+    flex: 1 1 auto; /* Allows cards to grow and shrink */
+    text-align: center;
+    position: relative; /* Required for hover effect */
+    border: 2px solid transparent; /* Initial border */
+    transition: border-color 0.3s ease; /* Smooth transition for hover */
+    border-radius: 8px; /* Optional: to match the rounded corners of the image */
+}
+
+.profile-card:hover {
+    border-color: #d1363e; /* Border color on hover */
+    border-width: 4px;
+}
+
+.profile-card:hover img {
+    filter: grayscale(50%); /* Grayscale filter on hover */
+}
+
+.profile-card img {
+    width:250px; /* Makes image responsive within the card */
+    height:250px;
+    border-radius: 2px;
+}
+
+.profile-card h3 {
+    margin: 10px 0 5px;
+    font-size: 18px;
+}
+
+.profile-card p {
+    margin: 0;
+    font-size: 16px;
+    color: gray;
+}
+
+.view-more-container {
+    display: flex;
+    justify-content: right;
+    width: 100%;
+}
+
+.view-more-button {
+    background-color:#d1363e;
+    color: #fff;
+    border: none;
+    padding: 5px 20px;
+    font-size: 16px;
+    margin-top: 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.view-more-button:hover {
+    background-color: #c9050f;
+}
 
 
     </style>
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="logo">SkillSync</div>
-    </nav>
 
     <!-- Hero Section -->
     <div class="hero-section">
         <div class="content">
             <h1>Connect with Top Project Managers</h1>
             <p>SkillSync is a marketplace for top developers, engineers, programmers, coders, architects, and consultants. Top companies and start-ups hire freelance developers from Toptal for their most mission-critical projects.</p>
-            <button>Hire top Project Managers</button>
+            <!-- <button>Hire top Project Managers</button> -->
         </div>
     </div>
 
     <!-- Intro Text -->
     
-
-    <!-- Profile Cards -->
-    <div class="profile-container">
-        <div class="intro-text">
-            <h2>Explore the top 3 freelancers <br>who deliver outstanding <br>results</h2>
-        </div>
-        <div class="profile-card">
-            <img src="https://imgs.search.brave.com/EcbeGlqXlo-1UsUTCdkF0yVSwJa2x_xL3p66MTvzPns/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMtZ2xvYmFsLndl/YnNpdGUtZmlsZXMu/Y29tLzVlYzdkYWQy/ZTZmNjI5NWE5ZTJh/MjNkZC81ZWRmYTdj/NmY5NzhlNzUzNzJk/YzMzMmVfcHJvZmls/ZXBob3RvMS5qcGVn" alt="Sacha Dubois">
-            <h3>Sacha Dubois</h3>
-            <p>Creative Director</p>
-        </div>
-        <div class="profile-card">
-            <img src="https://imgs.search.brave.com/p4Pz6USv0Np57kAh0NHZE4B4V8xnUAD0-yMPE1siUgI/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9leHBl/cnRwaG90b2dyYXBo/eS5iLWNkbi5uZXQv/d3AtY29udGVudC91/cGxvYWRzLzIwMjAv/MDgvcHJvZmlsZS1w/aG90b3MtNC5qcGc" alt="Lorna Alvarado">
-            <h3>Lorna Alvarado</h3>
-            <p>UI/UX Designer</p>
-        </div>
-        <div class="profile-card">
-            <img src="https://imgs.search.brave.com/fFUWByEobtO5l5q5lDSCWOcHc6DomvBrTd856pwJ4GY/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTEz/Nzg1MTU3NC9waG90/by9wcm9maWxlLW9m/LXlvdW5nLXdvbWFu/cy1mYWNlLmpwZz9z/PTYxMng2MTImdz0w/Jms9MjAmYz1GQjIy/UmIwM3NZZkNiTl9M/MmNoQ2psNHVTN2JU/VTdWN1U5WEUySEZx/SFpRPQ" alt="Itsuki Takahashi">
-            <h3>Itsuki Takahashi</h3>
-            <p>Digital Illustrator and Author</p>
-        </div>
+<!-- Profile Cards -->
+<div class="profile-container">
+    <div class="intro-text">
+        <h2>Explore the top 3 freelancers <br>who deliver outstanding <br>results</h2>
     </div>
+    <div class="profile-card">
+        <img src="https://imgs.search.brave.com/EcbeGlqXlo-1UsUTCdkF0yVSwJa2x_xL3p66MTvzPns/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMtZ2xvYmFsLndl/YnNpdGUtZmlsZXMu/Y29tLzVlYzdkYWQy/ZTZmNjI5NWE5ZTJh/MjNkZC81ZWRmYTdj/NmY5NzhlNzUzNzJk/YzMzMmVfcHJvZmls/ZXBob3RvMS5qcGVn" alt="Sacha Dubois">
+        <h3>Sacha Dubois</h3>
+        <p>Creative Director</p>
+    </div>
+    <div class="profile-card">
+        <img src="https://imgs.search.brave.com/p4Pz6USv0Np57kAh0NHZE4B4V8xnUAD0-yMPE1siUgI/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9leHBl/cnRwaG90b2dyYXBo/eS5iLWNkbi5uZXQv/d3AtY29udGVudC91/cGxvYWRzLzIwMjAv/MDgvcHJvZmlsZS1w/aG90b3MtNC5qcGc" alt="Lorna Alvarado">
+        <h3>Lorna Alvarado</h3>
+        <p>UI/UX Designer</p>
+    </div>
+    <div class="profile-card">
+        <img src="https://imgs.search.brave.com/fFUWByEobtO5l5q5lDSCWOcHc6DomvBrTd856pwJ4GY/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTEz/Nzg1MTU3NC9waG90/by9wcm9maWxlLW9m/LXlvdW5nLXdvbWFu/cy1mYWNlLmpwZz9z/PTYxMng2MTImdz0w/Jms9MjAmYz1GQjIy/UmIwM3NZZkNiTl9M/MmNoQ2psNHVTN2JU/VTdWN1U5WEUySEZx/SFpRPQ" alt="Itsuki Takahashi">
+        <h3>Itsuki Takahashi</h3>
+        <p>Digital Illustrator and Author</p>
+    </div>
+</div>
 
+
+   
     <!-- View More Button -->
     <div class="view-more-container">
         <button class="view-more-button">View More</button>
     </div>
+    <script>
+        document.querySelector('.view-more-button').addEventListener('click', function() {
+            window.location.href = 'projectmanagersVM.html'; // Replace 'next-page.html' with the actual URL of the next page
+        });
+    </script>
 
 
 
