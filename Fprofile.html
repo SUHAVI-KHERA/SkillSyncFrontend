@@ -48,29 +48,7 @@
         .linkedin:hover {
             background-color: #006097;
         }
-        /* .social-button {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0.5rem 1rem;
-            border-radius: 0.375rem;
-            font-size: 1rem;
-            color: #fff;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        } */
-        /* .google {
-            background-color: #4285F4;
-        }
-        .linkedin {
-            background-color: #0077B5;
-        }
-        .google:hover {
-            background-color: #357ae8;
-        }
-        .linkedin:hover {
-            background-color: #006097;
-        } */
+        
     </style>
 </head>
 <body class="bg-white">
@@ -126,6 +104,17 @@
                 <label class="block text-black font-bold mb-2">Availability</label>
                 <div class="flex items-center">
                     <input type="radio" id="fulltime" name="availability" value="Full-time" class="mr-2">
+                    <label for="fulltime" class="mr-4">Looking for work</label>
+                    <input type="radio" id="parttime" name="availability" value="Part-time" class="mr-2">
+                    <label for="parttime" class="mr-4">Occupied</label>
+                </div>
+            </div>
+
+            <!-- Looking work in -->
+            <div class="mb-4">
+                <label class="block text-black font-bold mb-2">Looking work in</label>
+                <div class="flex items-center">
+                    <input type="radio" id="fulltime" name="availability" value="Full-time" class="mr-2">
                     <label for="fulltime" class="mr-4">Full-time</label>
                     <input type="radio" id="parttime" name="availability" value="Part-time" class="mr-2">
                     <label for="parttime" class="mr-4">Part-time</label>
@@ -133,6 +122,8 @@
                     <label for="freelancer">Freelancer</label>
                 </div>
             </div>
+
+             
              <!-- Charges Per Hour Section -->
             <div class="mb-4">
                 <label class="block text-black font-bold mb-2" for="charges">Charges Per Hour</label>
@@ -157,13 +148,13 @@
                 <button type="button" class="bg-red-500 hover:bg-red-800 text-white px-4 py-2 rounded" onclick="addCertificate()">Add Certificate</button>
             </div>
               <!-- LinkedIn Profile Field -->
-        <div class="mb-4">
+        <!-- <div class="mb-4">
             <label class="block text-black font-bold mb-2" for="linkedin">LinkedIn Profile</label>
             <input type="url" id="linkedin" placeholder="https://www.linkedin.com/in/yourprofile" class="w-full p-3 border rounded focus:outline-none focus:ring-2 focus:ring-black">
-        </div>
+        </div> -->
 
         <!-- GitHub Profile Field -->
-        <div class="mb-4">
+         <div class="mb-4">
             <label class="block text-black font-bold mb-2" for="github">GitHub Profile</label>
             <input type="url" id="github" placeholder="https://github.com/yourusername" class="w-full p-3 border rounded focus:outline-none focus:ring-2 focus:ring-black">
         </div>
@@ -285,7 +276,11 @@
                 toast.classList.add('opacity-0');
             }, 3000);
         }
-    //    function addCertificate() {
+    </script>
+ 
+</body>
+</html>
+    <!-- //    function addCertificate() {
     //         const container = document.getElementById('certificates-container');
 
             // Create a container for each certificate
@@ -334,8 +329,5 @@
         //     certificateContainer.appendChild(imageContainer);
         //     container.appendChild(certificateContainer);
         // }
-    </script>
- 
-</body>
-</html>
-
+    
+ -->

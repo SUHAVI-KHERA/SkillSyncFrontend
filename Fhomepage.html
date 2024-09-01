@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreelancersUI</title>
+    <style>
+
+        /* footer */
+.footer-section {
+    background-color: black;
+    font-family: "Lora", serif;
+    color: white;
+    padding: 40px 0;
+    font-family: Arial, sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    font-family: "Lora", serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+/* General column styles */
+.footer-column {
+    flex: 1;
+    font-family: "Lora", serif;
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    font-family: "Lora", serif;
+    margin-bottom: 10px;
+}
+
+/* Specific column styling */
+.column-one {
+    width: 10%;
+    font-family: "Lora", serif;
+    margin-right: 1%;
+    margin-left: 5%;
+}
+
+.column-two {
+    width: 50%;
+    margin-right: 5%;
+    font-family: "Lora", serif;
+    margin-left: 5%;
+}
+
+.column-three {
+    width: 10%;
+    font-family: "Lora", serif;
+    margin-left: 25%;
+}
+
+/* Styling for HR */
+.footer-header-divider {
+    border: none;
+    font-family: "Lora", serif;
+    border-top: 1px solid white;
+    margin: 10px 0;
+    width: 60%;
+}
+
+/* Specific styling for featured design skills columns */
+.skills-grid {
+    display: flex;
+    font-family: "Lora", serif;
+    justify-content: space-between;
+}
+
+.skills-grid ul {
+    flex: 1;
+    min-width: 150px;
+    font-family: "Lora", serif;
+    list-style-type: none;
+    padding: 0;
+    margin: 0 10px;
+}
+
+/* List styles */
+.footer-column ul {
+    list-style-type: none;
+    font-family: "Lora", serif;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+    font-family: "Lora", serif;
+}
+
+.footer-column ul li a {
+    color: white;
+    text-decoration: none;
+    font-family: "Lora", serif;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #d1363e;
+    font-family: "Lora", serif;
+}
+
+/* Footer bottom styling */
+.footer-divider {
+    border: none;
+    border-top: 1px solid white;
+    font-family: "Lora", serif;
+    margin: 20px 0;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-family: "Lora", serif;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-family: "Lora", serif;
+}
+
+.footer-bottom a {
+    color: white;
+    font-family: "Lora", serif;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-bottom a:hover {
+    color: #d1363e;
+    font-family: "Lora", serif;
+}
+
+/* Social icon styles */
+.social-icons {
+    margin-top: 10px;
+    font-family: "Lora", serif;
+}
+
+.social-icons a {
+    display: inline-block;
+    font-family: "Lora", serif;
+    margin: 0 10px;
+}
+
+.social-icons img {
+    width: 20px;
+    font-family: "Lora", serif;
+    height: 20px;
+    filter: brightness(0) invert(1);
+    transition: filter 0.3s;
+}
+
+.social-icons a:hover img {
+    filter: brightness(0) invert(1) sepia(1) hue-rotate(-50deg);
+    font-family: "Lora", serif;
+}
+
+/* Responsive styling */
+@media (max-width: 992px) {
+    .footer-column {
+        flex-basis: 50%;
+        font-family: "Lora", serif;
+    }
+
+    .skills-grid {
+        flex-wrap: wrap;
+        font-family: "Lora", serif;
+    }
+
+    .skills-grid ul {
+        flex-basis: 45%;
+        font-family: "Lora", serif;
+        margin-bottom: 20px;
+    }
+
+    .column-one, .column-two, .column-three {
+        width: 100%;
+        font-family: "Lora", serif;
+        margin: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-column {
+        flex-basis: 100%;
+        font-family: "Lora", serif;
+        margin-bottom: 20px;
+    }
+
+    .skills-grid {
+        flex-direction: column;
+        font-family: "Lora", serif;
+    }
+
+    .skills-grid ul {
+        flex-basis: 100%;
+        font-family: "Lora", serif;
+        margin-bottom: 10px;
+    }
+
+    .footer-bottom {
+        margin-top: 40px;
+        font-family: "Lora", serif;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-content {
+        flex-direction: column;
+        font-family: "Lora", serif;
+        align-items: center;
+        text-align: center;
+    }
+
+    .skills-grid ul {
+        margin: 0;
+        font-family: "Lora", serif;
+    }
+
+    .social-icons a {
+        margin: 0 5px;
+        font-family: "Lora", serif;
+    }
+
+    .social-icons img {
+        width: 18px;
+        font-family: "Lora", serif;
+        height: 18px;
+    }
+
+    .footer-bottom p {
+        font-size: 14px;
+        font-family: "Lora", serif;
+    }
+
+    .footer-bottom a {
+        font-size: 14px;
+        font-family: "Lora", serif;
+    }
+}
+
+       body {
+    margin: 0;
+    font-family: "Lora", serif;
+}
+
+.navbar {
+    padding: 20px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: "Merienda", cursive;
+}
+
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    height: 80vh;
+    background-image: url(https://imgs.search.brave.com/AuW6Crgh4Gs3Xa-ihzc3EXyPzCBE3dGKdTrm4UCLgt8/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXZlLmNv/bS93cC93cDU1MjQ2/NTIuanBn);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.content {
+    padding: 0 20% 0 5%;
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+h1 {
+    font-size: 48px;
+    margin: 0;
+    font-weight: 300;
+}
+
+h1 .highlight {
+    color: #d1363e;
+    text-decoration: underline;
+}
+
+p {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+button {
+    background-color:#d1363e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* cards */
+.profile-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  padding: 20px;
+  max-width: 100%; 
+  min-height: 650px; 
+  margin: 0 auto; 
+  flex-wrap: wrap; 
+}
+
+
+.intro-text {
+  flex: 1;
+  text-align: left;
+  max-width: 300px; 
+  margin-right: 20px; 
+}
+
+.cards-container {
+  display: flex;
+  flex: 2;
+  justify-content:space-evenly;
+  flex-wrap: wrap; 
+}
+
+.card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px; 
+  text-align: left;
+  flex-basis: 50%; 
+ 
+  margin: 10px;
+  max-width: 70px; 
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.card1 {
+    background-image: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgICA0HBwgIBwcHCA0HBwcHBw8ICQcNFREWFhUREx8YHSggGBolJxMTITEhJSkrLi4uFx8zODMsNygtLisBCgoKDg0NDw0NDysZFRkrKzcrLS03LS0rKy0rNysrKzcrKysrNysrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIALcBEwMBIgACEQEDEQH/xAAYAAEBAQEBAAAAAAAAAAAAAAACAQADB//EABYQAQEBAAAAAAAAAAAAAAAAAAABEf/EABkBAAMBAQEAAAAAAAAAAAAAAAABAwIEBv/EABgRAQEBAQEAAAAAAAAAAAAAAAABAhES/9oADAMBAAIRAxEAPwDyGQpGhSOS16DOWkKRZCkZWzlJCkWQpCWmUkLGkKQKzKYshSLgbmRxcLFwm5kcbCxcDXkMbDxsA8hjYeNgHkMTHTEwF5DEw8TAzchiY6WDhs3LnYljpYlgYuXOwbHSxLAncuVg2Otg2GlrLnYNjpYNjUqOsudg2Olg1qI6y54xMafHaFEkKRN2Ziwokhwl8xoUaFCVzGhRIUJWRorQgpIiqwakZsVg1xsZWB8RlYDgsrAuDiEwZsDEMQzYNiU6NhsWBYlh2DQnYFGnUsCWo52DYdGmjqOdGx0sGtRHUDGVmk+OsODDibrzFkKIUJbMWQokKBaRYsSFCUkaEkUNyKysG4zKwaZlQBmVAEZWBCysCsFCShmwEsJKGLBo2HRpp2BUpVKErAsGw6FNLUCwadGmjqBjKxpcdYcGHGXXmLCgw4S0WFEiwlZFhRIsCkWLEINxlRQ0zMoaZmYBmZgEZmAZFQMohICo1CShijRpVKE7AqUqNNOjQp0aEtQKNOhTQ0KKzSbtCgwow6clCgw4S0WFBhQKxYQwgpFWJFgbiszBpWZgbMzA2ZmAZFQEzMwJEVgyKElDNGjSqUMUaNKjTSo0aVGhLQ0KdGmjoGZjSdYUGFGXTkocCHCViwoMKBWLCGFApFixIsDcVmYNLGaMRszMZszMAzMwJGZgSMzAkSqgYopSo0MUaNOhTTo1KVGhKhRpUaaOhZmNJ0hQYUZXyUKDCgWhQoMWErCixIsCkKKihuKzMGljMwNmZgbMzAM1ZgSMzAkZmBIlVKGKlGrUoYo0aVGmnUo0qNCVCjSo00dCzMaRw4EKEtmnCgQoS0pQoMKErCiwYUCkVUWBuKqRQ1GVFDTMzA2ZmAZFQEzMwJGZAyw1UoZqVKo0MVKNKjTSo0aVGhLQ0aVGmjoWZjTKFKEKEpmnCgSlCWzThQIUJWU4sGLApKUKDFCkJkihqKqMGlZGBqyMAzMwJkVATIyBmsjIGalSrRpp1KNWpQnRqVaNCWqNGlQpo6qMjGmUpRzhyg805SgQoS2acKBClJaU4UCFCVlKKMXQpKSjqhqUlHWDXSZGB9VkbQOqjIB1UZAzayMgZtZK2oGbWo1aNpp2tRq0QnalGrRppaqUatGmjqojMafWlKVzlKUWFmukpSucpSsrZ06SlK5ylKFs6dJSlc5VlJWadJS1zlXSbmnTWlDV0NzR6uhraGvR62jraD9HqaOtoHotbQ1tBei1NHW0F6XW0dTTZul1NS1NDF0tqWpo6GLpbUqWjaad0to2taNoSumtG1rRtakR1ptYdY0+pKsqsbMqylKzM1WUpSlZmVZSlKVGCspausxKSrKuswb6utqsGutrazEOtqarGOprazAuprazAupqWswZtTU1mDFqaNqsbFo2jazBO0bUtRmolalo2qzSdo6zMafX/9k='); /* Background image for the first card */
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    width: 300px;
+    padding: 20px;
+    text-align: left;
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.card2 {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_VEvYkdPckGZQZ9sO0vQNVwVxeIe-X1fZTQ&s'); /* Background image for the second card */
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    width: 300px;
+    padding: 20px;
+    text-align: left;
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.card3 {
+    background-image: url('https://wallpapers.com/images/hd/plain-dark-green-wallpaper-qkfa2rem4fnm65ge.jpg'); /* Background image for the third card */
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    width: 300px;
+    padding: 20px;
+    text-align: left;
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  .intro-text {
+    text-align: center; 
+    margin: 0 auto 20px auto; 
+    max-width: none; 
+  }
+  
+  .cards-container {
+    justify-content: center; 
+  }
+
+  .card {
+    flex-basis: 45%; 
+    max-width: none; 
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    flex-basis: 100%;
+    margin: 10px 0; 
+  }
+}
+
+/* profiles */
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.profile-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+}
+
+.profile-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    background-color: #fdf3f7;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 3%;
+    margin-right: 20px;
+}
+
+.profile-details {
+    flex: 1;
+}
+
+.profile-details h2 {
+    margin: 0;
+    font-size: 1.8em;
+}
+
+.profile-details p.title {
+    font-size: 1.2em;
+    color: gray;
+}
+
+.profile-details p {
+    margin: 5px 0;
+    color: #333; 
+    font-weight: 500;
+    font-size: 1em;
+}
+
+.profile-details p span {
+    color: #555; 
+    font-weight: 600; 
+}
+
+.view-btn {
+    background-color: #EB2323;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+.view-btn:hover {
+    background-color: #991b1b;
+}
+
+.skills {
+    margin-top: 10px;
+}
+
+.skills span {
+    background-color: #e9ecef;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    display: inline-block;
+    color: #333; 
+    font-weight: 600; 
+}
+
+
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">SkillSync</div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="content">
+            <h1>Connect with Top Freelancers</h1>
+            <p>SkillSync is a marketplace for top developers, designers, finance experts, marketing experts, product managers, and project managers. Top companies and start-ups hire freelancers from SkillSync for their most mission-critical projects.</p>
+            <button>Hire top Freelancers</button>
+        </div>
+    </div>
+
+    <!-- Intro Text -->
+    
+
+    <!-- Profile Cards -->
+    <div class="profile-container">
+        <div class="intro-text">
+          <h2>Meet the top 3 companies that<br> excel in hiring talented<br> freelancers.</h2>
+        </div>
+        
+        <div class="cards-container">
+          <div class="card1">
+            <!-- <img src="path/to/first-image.png" alt="Company 1 Logo"> -->
+            <p>“Upwork enables us to differentiate ourselves from our competitors and produce content at a higher caliber.”</p>
+            <p><strong>Josh Machiz, Chief Digital Officer</strong></p>
+            <p>Emmy Winning Facebook Watch program</p>
+            <p>Millions of impressions generated per client per IPO</p>
+          </div>
+          <div class="card2">
+            <!-- <img src="path/to/second-image.png" alt="Company 2 Logo"> -->
+            <p>“Upwork enables us to differentiate ourselves from our competitors and produce content at a higher caliber.”</p>
+            <p><strong>Josh Machiz, Chief Digital Officer</strong></p>
+            <p>Emmy Winning Facebook Watch program</p>
+            <p>Millions of impressions generated per client per IPO</p>
+          </div>
+          <div class="card3">
+            <!-- <img src="path/to/third-image.png" alt="Company 3 Logo"> -->
+            <p>“One of the advantages of utilizing freelancers is finding talent with different skills quickly as our needs change.”</p>
+            <p><strong>Carol Taylor, Director of Content Experience</strong></p>
+            <p>50% Faster launch of projects</p>
+            <p>10,000 projects completed</p>
+          </div>
+        </div>
+      </div>
+      
+    <!-- Project Proposal Page 1-->
+<div class="container">
+    <!-- Profile Section -->
+    <div class="profile-card">
+        <!-- <img src="images/p1.jpeg" alt="Client Profile Picture" class="profile-pic"> -->
+        <div class="profile-details">
+            <h2>Project: <span>Financial Model Development</span></h2>
+            <p class="title">Proposal Title: <span>Comprehensive Financial Modeling</span></p>
+            <p>Description: <span>Develop a comprehensive financial model for a start-up, covering revenue projections, expense forecasting, and cash flow management.</span></p>
+            <p>Type: <span>Freelance Project</span></p>
+            <p>Skills Required: 
+                <span>Financial Modeling</span>, 
+                <span>Accounting</span>, 
+                <span>Excel</span>, 
+                <span>FP&A</span>
+            </p>
+            <p>Estimated Budget: <span>$5,000 - $7,000</span></p>
+            <p>Deadline: <span>September 30, 2024</span></p>
+            <div class="skills">
+                <span>Financial Modeling</span>
+                <span>Accounting</span>
+                <span>Budgeting Consulting</span>
+                <!-- Add more skills as needed -->
+            </div>
+            <button class="view-btn">View Proposal</button>
+        </div>
+    </div>
+</div>
+
+<!-- Project Proposal Page 2-->
+<div class="container">
+    <!-- Profile Section -->
+    <div class="profile-card">
+        <!-- <img src="images/p1.jpeg" alt="Client Profile Picture" class="profile-pic"> -->
+        <div class="profile-details">
+            <h2>Project: <span>Financial Model Development</span></h2>
+            <p class="title">Proposal Title: <span>Comprehensive Financial Modeling</span></p>
+            <p>Description: <span>Develop a comprehensive financial model for a start-up, covering revenue projections, expense forecasting, and cash flow management.</span></p>
+            <p>Type: <span>Freelance Project</span></p>
+            <p>Skills Required: 
+                <span>Financial Modeling</span>, 
+                <span>Accounting</span>, 
+                <span>Excel</span>, 
+                <span>FP&A</span>
+            </p>
+            <p>Estimated Budget: <span>$5,000 - $7,000</span></p>
+            <p>Deadline: <span>September 30, 2024</span></p>
+            <div class="skills">
+                <span>Financial Modeling</span>
+                <span>Accounting</span>
+                <span>Budgeting Consulting</span>
+                <!-- Add more skills as needed -->
+            </div>
+            <button class="view-btn">View Proposal</button>
+        </div>
+    </div>
+</div>
+
+<!-- Project Proposal Page 3 -->
+<div class="container">
+    <!-- Profile Section -->
+    <div class="profile-card">
+        <!-- <img src="images/p1.jpeg" alt="Client Profile Picture" class="profile-pic"> -->
+        <div class="profile-details">
+            <h2>Project: <span>Financial Model Development</span></h2>
+            <p class="title">Proposal Title: <span>Comprehensive Financial Modeling</span></p>
+            <p>Description: <span>Develop a comprehensive financial model for a start-up, covering revenue projections, expense forecasting, and cash flow management.</span></p>
+            <p>Type: <span>Freelance Project</span></p>
+            <p>Skills Required: 
+                <span>Financial Modeling</span>, 
+                <span>Accounting</span>, 
+                <span>Excel</span>, 
+                <span>FP&A</span>
+            </p>
+            <p>Estimated Budget: <span>$5,000 - $7,000</span></p>
+            <p>Deadline: <span>September 30, 2024</span></p>
+            <div class="skills">
+                <span>Financial Modeling</span>
+                <span>Accounting</span>
+                <span>Budgeting Consulting</span>
+                <!-- Add more skills as needed -->
+            </div>
+            <button class="view-btn">View Proposal</button>
+        </div>
+    </div>
+</div>
+
+<!-- Project Proposal Page 4-->
+<div class="container">
+    <!-- Profile Section -->
+    <div class="profile-card">
+        <!-- <img src="images/p1.jpeg" alt="Client Profile Picture" class="profile-pic"> -->
+        <div class="profile-details">
+            <h2>Project: <span>Financial Model Development</span></h2>
+            <p class="title">Proposal Title: <span>Comprehensive Financial Modeling</span></p>
+            <p>Description: <span>Develop a comprehensive financial model for a start-up, covering revenue projections, expense forecasting, and cash flow management.</span></p>
+            <p>Type: <span>Freelance Project</span></p>
+            <p>Skills Required: 
+                <span>Financial Modeling</span>, 
+                <span>Accounting</span>, 
+                <span>Excel</span>, 
+                <span>FP&A</span>
+            </p>
+            <p>Estimated Budget: <span>$5,000 - $7,000</span></p>
+            <p>Deadline: <span>September 30, 2024</span></p>
+            <div class="skills">
+                <span>Financial Modeling</span>
+                <span>Accounting</span>
+                <span>Budgeting Consulting</span>
+                <!-- Add more skills as needed -->
+            </div>
+            <button class="view-btn">View Proposal</button>
+        </div>
+    </div>
+</div>
+    
+<!-- Project Proposal Page 5 -->
+<div class="container">
+    <!-- Profile Section -->
+    <div class="profile-card">
+        <!-- <img src="images/p1.jpeg" alt="Client Profile Picture" class="profile-pic"> -->
+        <div class="profile-details">
+            <h2>Project: <span>Financial Model Development</span></h2>
+            <p class="title">Proposal Title: <span>Comprehensive Financial Modeling</span></p>
+            <p>Description: <span>Develop a comprehensive financial model for a start-up, covering revenue projections, expense forecasting, and cash flow management.</span></p>
+            <p>Type: <span>Freelance Project</span></p>
+            <p>Skills Required: 
+                <span>Financial Modeling</span>, 
+                <span>Accounting</span>, 
+                <span>Excel</span>, 
+                <span>FP&A</span>
+            </p>
+            <p>Estimated Budget: <span>$5,000 - $7,000</span></p>
+            <p>Deadline: <span>September 30, 2024</span></p>
+            <div class="skills">
+                <span>Financial Modeling</span>
+                <span>Accounting</span>
+                <span>Budgeting Consulting</span>
+                <!-- Add more skills as needed -->
+            </div>
+            <button class="view-btn">View Proposal</button>
+        </div>
+    </div>
+</div>
+    
+    
+<!-- footer -->
+<footer class="footer-section">
+    <div class="footer-content">
+        <!-- Hire Talent Column -->
+        <div class="footer-column column-one">
+            <h3>Hire Talent</h3>
+            <hr class="footer-header-divider">
+            <ul>
+                <li><a href="developer.html">Hire Freelance Developers</a></li>
+                <li><a href="designer.html">Hire Freelance Designers</a></li>
+                <li><a href="marketingexperts.html">Hire Freelance Marketers</a></li>
+                <li><a href="productmanagers.html">Hire Freelance Product Managers</a></li>
+                <li><a href="projectmanager.html">Hire Freelance Project Managers</a></li>
+                <li><a href="financeexperts.html">Hire Freelance Finance Experts</a></li>
+            </ul>
+        </div>
+
+        <!-- Featured Design Skills Column -->
+        <div class="footer-column column-two">
+            <h3>Featured Design Skills</h3>
+            <hr class="footer-header-divider">
+            <div class="skills-grid">
+                <ul>
+                    <li><a href="#">UX Designers</a></li>
+                    <li><a href="#">UI Designers</a></li>
+                    <li><a href="#">Web Designers</a></li>
+                    <li><a href="#">Mobile App Designers</a></li>
+                    <li><a href="#">Graphic Designers</a></li>
+                    <li><a href="#">Brand Designers</a></li>
+                    <li><a href="#">UX Strategists</a></li>
+                    <li><a href="#">3D Animators</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Adobe After Effects Designers</a></li>
+                    <li><a href="#">Adobe Illustrator Experts</a></li>
+                    <li><a href="#">Creative Directors</a></li>
+                    <li><a href="#">Data Visualization Designers</a></li>
+                    <li><a href="#">E-commerce Designers</a></li>
+                    <li><a href="#">Illustrators</a></li>
+                    <li><a href="#">Landing Page Designers</a></li>
+                    <li><a href="#">Logo Designers</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Mobile UX Designers</a></li>
+                    <li><a href="#">Presentation Designers</a></li>
+                    <li><a href="#">Product Designers</a></li>
+                    <li><a href="#">SaaS Designers</a></li>
+                    <li><a href="#">UI/UX Designers</a></li>
+                    <li><a href="#">UX Researchers</a></li>
+                    <li><a href="#">Webflow Designers</a></li>
+                    <li><a href="#">WordPress Designers</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- About Column -->
+        <div class="footer-column column-three">
+            <h3>About</h3>
+            <hr class="footer-header-divider">
+            <ul>
+                <li><a href="#">Why SkillSync</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Press Center</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Community</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <hr class="footer-divider">
+    <div class="footer-bottom">
+        <p>&copy; 2010 - 2024 SkillSync, LLC | <a href="#">Privacy Policy</a> | <a href="#">Website Terms</a> | <a href="#">Accessibility</a></p>
+        <!-- <div class="social-icons">
+            <a href="#"><img src="linkedin.png" alt="LinkedIn"></a>
+            <a href="#"><img src="twitter.png" alt="Twitter"></a>
+            <a href="#"><img src="facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="instagram.png" alt="Instagram"></a>
+        </div> -->
+    </div>
+</footer>
+
+
+    <!-- ScrollReveal Script -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+</body>
+</html>

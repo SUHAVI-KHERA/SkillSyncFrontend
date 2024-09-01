@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developers</title>
+    <style>
+       body {
+    margin: 0;
+    font-family: "Lora", serif;
+}
+
+.navbar {
+    padding: 20px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: "Merienda", cursive;
+}
+
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    height: 80vh;
+    background-image: url(https://imgs.search.brave.com/-oNZZbjC7aTBVJarSTrygIs2JgBSutH5-y6exOi5zTw/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzAyLzQyLzc5LzU2/LzM2MF9GXzI0Mjc5/NTYwM19uQ2htQnRm/WUU0VkRvUjh4a2Zl/WFRzR2FoUmVkbDlm/UC5qcGc);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.content {
+    padding: 0 20% 0 5%;
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+h1 {
+    font-size: 48px;
+    margin: 0;
+    font-weight: 300;
+}
+
+h1 .highlight {
+    color: #d1363e;
+    text-decoration: underline;
+}
+
+p {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+button {
+    background-color:#d1363e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.intro-text {
+    margin-top: 7%;
+}
+
+.intro-text h2 {
+    font-size: 34px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.profile-container {
+    margin-top: 7%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between; 
+    align-items: flex-start;
+    gap: 20px;
+    padding: 40px;
+    overflow-x: auto;
+}
+
+.profile-card {
+    flex: 1 1 auto;
+    text-align: center;
+    position: relative; 
+    border: 2px solid transparent; 
+    transition: border-color 0.3s ease; 
+    border-radius: 8px;
+}
+
+.profile-card:hover {
+    border-color: #d1363e; 
+    border-width: 4px;
+}
+
+.profile-card:hover img {
+    filter: grayscale(50%);
+}
+
+.profile-card img {
+    width:250px; 
+    height:250px;
+    border-radius: 2px;
+}
+
+.profile-card h3 {
+    margin: 10px 0 5px;
+    font-size: 18px;
+}
+
+.profile-card p {
+    margin: 0;
+    font-size: 16px;
+    color: gray;
+}
+
+
+
+@media (max-width: 768px) {
+    .profile-container {
+        flex-wrap: wrap; 
+        justify-content: center; 
+    }
+
+    .profile-card {
+        flex: 0 1 45%; 
+        margin-bottom: 20px; 
+    }
+}
+
+.talent-section {
+        padding: 50px 0;
+        text-align: center;
+        background-color: #ffffff;
+    }
+    
+    
+.section-header {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.section-header h1 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.section-header p {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.5;
+}
+
+
+    .talent-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 100px;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    
+    .talent-card {
+        display: block;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+        cursor: pointer;
+        color: #333; 
+        text-decoration: none;
+    }
+    
+    .talent-card .icon {
+        margin-bottom: 20px;
+    }
+    
+    .talent-card .icon img {
+        width: 50px;
+        height: auto;
+    }
+    
+    .talent-card h3 {
+        margin: 10px 0;
+        font-size: 22px;
+        color: #333; 
+    }
+    
+    .talent-card p {
+        color: #666;
+        margin: 10px 0;
+    }
+    
+    .talent-card .view-link {
+        display: inline-block;
+        margin-top: 10px;
+        color: #d4575d; 
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s ease;
+    }
+    
+    .talent-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        background-color: #ffe5d4; 
+    }
+    
+    .talent-card:hover .view-link {
+        color: #d04a01; 
+    }
+    
+    .talent-card.highlighted {
+        background-color: #e36209; 
+        color: #fff;
+    }
+    
+    .talent-card.highlighted h3,
+    .talent-card.highlighted p,
+    .talent-card.highlighted .view-link {
+        color: #fff;
+    }
+    
+    .talent-card.highlighted:hover {
+        background-color: #d04a01;
+    }
+
+/* footer */
+.footer-section {
+    background-color: black;
+    font-family: "Lora", serif;
+    color: white;
+    padding: 40px 0;
+    font-family: Arial, sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    font-family: "Lora", serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+/* General column styles */
+.footer-column {
+    flex: 1;
+    font-family: "Lora", serif;
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    font-family: "Lora", serif;
+    margin-bottom: 10px;
+}
+
+/* Specific column styling */
+.column-one {
+    width: 10%;
+    font-family: "Lora", serif;
+    margin-right: 1%;
+    margin-left: 5%;
+}
+
+.column-two {
+    width: 50%;
+    margin-right: 5%;
+    font-family: "Lora", serif;
+    margin-left: 5%;
+}
+
+.column-three {
+    width: 10%;
+    font-family: "Lora", serif;
+    margin-left: 25%;
+}
+
+/* Styling for HR */
+.footer-header-divider {
+    border: none;
+    font-family: "Lora", serif;
+    border-top: 1px solid white;
+    margin: 10px 0;
+    width: 60%;
+}
+
+/* Specific styling for featured design skills columns */
+.skills-grid {
+    display: flex;
+    font-family: "Lora", serif;
+    justify-content: space-between;
+}
+
+.skills-grid ul {
+    flex: 1;
+    min-width: 150px;
+    font-family: "Lora", serif;
+    list-style-type: none;
+    padding: 0;
+    margin: 0 10px;
+}
+
+/* List styles */
+.footer-column ul {
+    list-style-type: none;
+    font-family: "Lora", serif;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+    font-family: "Lora", serif;
+}
+
+.footer-column ul li a {
+    color: white;
+    text-decoration: none;
+    font-family: "Lora", serif;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #d1363e;
+    font-family: "Lora", serif;
+}
+
+/* Footer bottom styling */
+.footer-divider {
+    border: none;
+    border-top: 1px solid white;
+    font-family: "Lora", serif;
+    margin: 20px 0;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-family: "Lora", serif;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-family: "Lora", serif;
+}
+
+.footer-bottom a {
+    color: white;
+    font-family: "Lora", serif;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-bottom a:hover {
+    color: #d1363e;
+    font-family: "Lora", serif;
+}
+
+/* Social icon styles */
+.social-icons {
+    margin-top: 10px;
+    font-family: "Lora", serif;
+}
+
+.social-icons a {
+    display: inline-block;
+    font-family: "Lora", serif;
+    margin: 0 10px;
+}
+
+.social-icons img {
+    width: 20px;
+    font-family: "Lora", serif;
+    height: 20px;
+    filter: brightness(0) invert(1);
+    transition: filter 0.3s;
+}
+
+.social-icons a:hover img {
+    filter: brightness(0) invert(1) sepia(1) hue-rotate(-50deg);
+    font-family: "Lora", serif;
+}
+
+/* Responsive styling */
+@media (max-width: 992px) {
+    .footer-column {
+        flex-basis: 50%;
+        font-family: "Lora", serif;
+    }
+
+    .skills-grid {
+        flex-wrap: wrap;
+        font-family: "Lora", serif;
+    }
+
+    .skills-grid ul {
+        flex-basis: 45%;
+        font-family: "Lora", serif;
+        margin-bottom: 20px;
+    }
+
+    .column-one, .column-two, .column-three {
+        width: 100%;
+        font-family: "Lora", serif;
+        margin: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-column {
+        flex-basis: 100%;
+        font-family: "Lora", serif;
+        margin-bottom: 20px;
+    }
+
+    .skills-grid {
+        flex-direction: column;
+        font-family: "Lora", serif;
+    }
+
+    .skills-grid ul {
+        flex-basis: 100%;
+        font-family: "Lora", serif;
+        margin-bottom: 10px;
+    }
+
+    .footer-bottom {
+        margin-top: 40px;
+        font-family: "Lora", serif;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-content {
+        flex-direction: column;
+        font-family: "Lora", serif;
+        align-items: center;
+        text-align: center;
+    }
+
+    .skills-grid ul {
+        margin: 0;
+        font-family: "Lora", serif;
+    }
+
+    .social-icons a {
+        margin: 0 5px;
+        font-family: "Lora", serif;
+    }
+
+    .social-icons img {
+        width: 18px;
+        font-family: "Lora", serif;
+        height: 18px;
+    }
+
+    .footer-bottom p {
+        font-size: 14px;
+        font-family: "Lora", serif;
+    }
+
+    .footer-bottom a {
+        font-size: 14px;
+        font-family: "Lora", serif;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">SkillSync</div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="content">
+            <h1>Connect with Top Freelancers</h1>
+            <p>SkillSync is a marketplace for top developers, designers, finance experts, marketing experts, product managers, and project managers. Top companies and start-ups hire freelancers from SkillSync for their most mission-critical projects.</p>
+            <button>Hire top Freelancers</button>
+        </div>
+    </div>
+
+    <!-- Intro Text -->
+    
+
+    <!-- Profile Cards -->
+    <div class="profile-container">
+        <div class="intro-text">
+            <h2>Explore the top 3 freelancers <br>who deliver outstanding <br>results.</h2>
+        </div>
+        <div class="profile-card">
+            <img src="https://imgs.search.brave.com/aPzzOrFrseVkMghXZNnZWBH2FnWWgD3Q9BEDdwJlysg/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMtZ2xvYmFsLndl/YnNpdGUtZmlsZXMu/Y29tLzVlYzdkYWQy/ZTZmNjI5NWE5ZTJh/MjNkZC81ZWRmYTdj/NjYwNGM3N2IxYjRi/ZDY1OGFfcHJvZmls/ZXBob3RvNS5qcGVn" alt="Sacha Dubois">
+            <h3>Sacha Dubois</h3>
+            <p>Creative Director</p>
+        </div>
+        <div class="profile-card">
+            <img src="https://imgs.search.brave.com/KEid7JH5WRHstWeKDjlJXKMAaJbeI_3fdeUls5_XB2o/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9leHBl/cnRwaG90b2dyYXBo/eS5iLWNkbi5uZXQv/d3AtY29udGVudC91/cGxvYWRzLzIwMTgv/MTAvY29vbC1wcm9m/aWxlLXBpY3R1cmVz/LXJldG91Y2hpbmct/MS5qcGc" alt="Lorna Alvarado">
+            <h3>Lorna Alvarado</h3>
+            <p>UI/UX Designer</p>
+        </div>
+        <div class="profile-card">
+            <img src="https://imgs.search.brave.com/fFUWByEobtO5l5q5lDSCWOcHc6DomvBrTd856pwJ4GY/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTEz/Nzg1MTU3NC9waG90/by9wcm9maWxlLW9m/LXlvdW5nLXdvbWFu/cy1mYWNlLmpwZz9z/PTYxMng2MTImdz0w/Jms9MjAmYz1GQjIy/UmIwM3NZZkNiTl9M/MmNoQ2psNHVTN2JU/VTdWN1U5WEUySEZx/SFpRPQ" alt="Itsuki Takahashi">
+            <h3>Itsuki Takahashi</h3>
+            <p>Digital Illustrator and Author</p>
+        </div>
+    </div>
+
+    
+    
+    
+    <!-- Talent Section -->
+   
+    <section class="talent-section">
+
+        <div class="section-header">
+            <h1>Leverage World-Class Talent</h1>
+            <p>We are the largest, globally-distributed network of top business, design, and technology talent, ready to tackle your most important initiatives.</p>
+        </div>
+
+        <div class="talent-grid">
+            <a href="#" class="talent-card">
+                <div class="icon">
+                    <img src="https://assets.toptal.io/images?url=https%3A%2F%2Ffrontier-assets.toptal.com%2F7027c187f96c0773.svg" alt="Developer Icon">
+                </div>
+                <h3>Developers</h3>
+                <p>Seasoned software engineers, coders, and architects with expertise across hundreds of technologies.</p>
+                <span class="view-link">View More &rarr;</span>
+            </a>
+            <a href="#" class="talent-card">
+                <div class="icon">
+                    <img src="https://assets.toptal.io/images?url=https%3A%2F%2Ffrontier-assets.toptal.com%2Fbc0547ba73046902.svg" alt="Designer Icon">
+                </div>
+                <h3>Designers</h3>
+                <p>Expert UI, UX, Visual, and Interaction designers as well as a wide range of illustrators, animators, and more.</p>
+                <span class="view-link">View More &rarr;</span>
+            </a>
+            <a href="#" class="talent-card">
+                <div class="icon">
+                    <img src="https://assets.toptal.io/images?url=https%3A%2F%2Ffrontier-assets.toptal.com%2F5fcbbd7dd7e5d2e7.svg" alt="Finance Icon">
+                </div>
+                <h3>Finance Experts</h3>
+                <p>Experts in financial modeling & valuation, startup funding, interim CFO work, and market sizing.</p>
+                <span class="view-link">View More &rarr;</span>
+            </a>
+            <a href="#" class="talent-card">
+                <div class="icon">
+                    <img src="https://assets.toptal.io/images?url=https%3A%2F%2Ffrontier-assets.toptal.com%2F1d189a5352fbf3a6.svg" alt="Project Manager Icon">
+                </div>
+                <h3>Project Managers</h3>
+                <p>Experienced in managing complex projects, delivering on time, within budget, and to the required quality.</p>
+                <span class="view-link">View More &rarr;</span>
+            </a>
+            <a href="#" class="talent-card">
+                <div class="icon">
+                    <img src="https://assets.toptal.io/images?url=https%3A%2F%2Ffrontier-assets.toptal.com%2Ffe1859a927e8aa7c.svg" alt="ProductManager Icon">
+                </div>
+                <h3>Product Manager</h3>
+                <p>Experienced product managers skilled in leading cross-functional teams to develop, launch, and scale innovative products.</p>
+                <span class="view-link">View More &rarr;</span>
+            </a>
+            <a href="#" class="talent-card">
+                <div class="icon">
+                    <img src="https://assets.toptal.io/images?url=https%3A%2F%2Ffrontier-assets.toptal.com%2F78d555213768e665.svg" alt="Marketing Icon">
+                </div>
+                <h3>Marketing Experts</h3>
+                <p>Skilled in creating marketing strategies, brand management, SEO, content creation, and more.</p>
+                <span class="view-link">View More &rarr;</span>
+            </a>
+            
+        </div>
+    </section>
+
+    
+    
+<!-- footer -->
+<footer class="footer-section">
+    <div class="footer-content">
+        <!-- Hire Talent Column -->
+        <div class="footer-column column-one">
+            <h3>Hire Talent</h3>
+            <hr class="footer-header-divider">
+            <ul>
+                <li><a href="developer.html">Hire Freelance Developers</a></li>
+                <li><a href="designer.html">Hire Freelance Designers</a></li>
+                <li><a href="marketingexperts.html">Hire Freelance Marketers</a></li>
+                <li><a href="productmanagers.html">Hire Freelance Product Managers</a></li>
+                <li><a href="projectmanager.html">Hire Freelance Project Managers</a></li>
+                <li><a href="financeexperts.html">Hire Freelance Finance Experts</a></li>
+            </ul>
+        </div>
+
+        <!-- Featured Design Skills Column -->
+        <div class="footer-column column-two">
+            <h3>Featured Design Skills</h3>
+            <hr class="footer-header-divider">
+            <div class="skills-grid">
+                <ul>
+                    <li><a href="#">UX Designers</a></li>
+                    <li><a href="#">UI Designers</a></li>
+                    <li><a href="#">Web Designers</a></li>
+                    <li><a href="#">Mobile App Designers</a></li>
+                    <li><a href="#">Graphic Designers</a></li>
+                    <li><a href="#">Brand Designers</a></li>
+                    <li><a href="#">UX Strategists</a></li>
+                    <li><a href="#">3D Animators</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Adobe After Effects Designers</a></li>
+                    <li><a href="#">Adobe Illustrator Experts</a></li>
+                    <li><a href="#">Creative Directors</a></li>
+                    <li><a href="#">Data Visualization Designers</a></li>
+                    <li><a href="#">E-commerce Designers</a></li>
+                    <li><a href="#">Illustrators</a></li>
+                    <li><a href="#">Landing Page Designers</a></li>
+                    <li><a href="#">Logo Designers</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Mobile UX Designers</a></li>
+                    <li><a href="#">Presentation Designers</a></li>
+                    <li><a href="#">Product Designers</a></li>
+                    <li><a href="#">SaaS Designers</a></li>
+                    <li><a href="#">UI/UX Designers</a></li>
+                    <li><a href="#">UX Researchers</a></li>
+                    <li><a href="#">Webflow Designers</a></li>
+                    <li><a href="#">WordPress Designers</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- About Column -->
+        <div class="footer-column column-three">
+            <h3>About</h3>
+            <hr class="footer-header-divider">
+            <ul>
+                <li><a href="#">Why SkillSync</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Press Center</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Community</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <hr class="footer-divider">
+    <div class="footer-bottom">
+        <p>&copy; 2010 - 2024 SkillSync, LLC | <a href="#">Privacy Policy</a> | <a href="#">Website Terms</a> | <a href="#">Accessibility</a></p>
+        <!-- <div class="social-icons">
+            <a href="#"><img src="linkedin.png" alt="LinkedIn"></a>
+            <a href="#"><img src="twitter.png" alt="Twitter"></a>
+            <a href="#"><img src="facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="instagram.png" alt="Instagram"></a>
+        </div> -->
+    </div>
+</footer>
+
+
+    <!-- ScrollReveal Script -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+</body>
+</html>

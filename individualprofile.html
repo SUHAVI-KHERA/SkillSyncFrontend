@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillSync | Vladimir Mitrovic</title>
+    
+    <style>
+
+        /* footer */
+.footer-section {
+    background-color: black;
+    font-family: "Lora", serif;
+    color: white;
+    padding: 40px 0;
+    /* font-family: Arial, sans-serif; */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    font-family: "Lora", serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+/* General column styles */
+.footer-column {
+    flex: 1;
+    font-family: "Lora", serif;
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    font-family: "Lora", serif;
+    margin-bottom: 10px;
+}
+
+/* Specific column styling */
+.column-one {
+    width: 10%;
+    font-family: "Lora", serif;
+    margin-right: 1%;
+    margin-left: 5%;
+}
+
+.column-two {
+    width: 50%;
+    margin-right: 5%;
+    font-family: "Lora", serif;
+    margin-left: 5%;
+}
+
+.column-three {
+    width: 10%;
+    font-family: "Lora", serif;
+    margin-left: 25%;
+}
+
+/* Styling for HR */
+.footer-header-divider {
+    border: none;
+    font-family: "Lora", serif;
+    border-top: 1px solid white;
+    margin: 10px 0;
+    width: 60%;
+}
+
+/* Specific styling for featured design skills columns */
+.skills-grid {
+    display: flex;
+    font-family: "Lora", serif;
+    justify-content: space-between;
+}
+
+.skills-grid ul {
+    flex: 1;
+    min-width: 150px;
+    font-family: "Lora", serif;
+    list-style-type: none;
+    padding: 0;
+    margin: 0 10px;
+}
+
+/* List styles */
+.footer-column ul {
+    list-style-type: none;
+    font-family: "Lora", serif;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+    font-family: "Lora", serif;
+}
+
+.footer-column ul li a {
+    color: white;
+    text-decoration: none;
+    font-family: "Lora", serif;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #d1363e;
+    font-family: "Lora", serif;
+}
+
+/* Footer bottom styling */
+.footer-divider {
+    border: none;
+    border-top: 1px solid white;
+    font-family: "Lora", serif;
+    margin: 20px 0;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-family: "Lora", serif;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-family: "Lora", serif;
+}
+
+.footer-bottom a {
+    color: white;
+    font-family: "Lora", serif;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-bottom a:hover {
+    color: #d1363e;
+    font-family: "Lora", serif;
+}
+
+/* Social icon styles */
+.social-icons {
+    margin-top: 10px;
+    font-family: "Lora", serif;
+}
+
+.social-icons a {
+    display: inline-block;
+    font-family: "Lora", serif;
+    margin: 0 10px;
+}
+
+.social-icons img {
+    width: 20px;
+    font-family: "Lora", serif;
+    height: 20px;
+    filter: brightness(0) invert(1);
+    transition: filter 0.3s;
+}
+
+.social-icons a:hover img {
+    filter: brightness(0) invert(1) sepia(1) hue-rotate(-50deg);
+    font-family: "Lora", serif;
+}
+
+/* Responsive styling */
+@media (max-width: 992px) {
+    .footer-column {
+        flex-basis: 50%;
+        font-family: "Lora", serif;
+    }
+
+    .skills-grid {
+        flex-wrap: wrap;
+        font-family: "Lora", serif;
+    }
+
+    .skills-grid ul {
+        flex-basis: 45%;
+        font-family: "Lora", serif;
+        margin-bottom: 20px;
+    }
+
+    .column-one, .column-two, .column-three {
+        width: 100%;
+        font-family: "Lora", serif;
+        margin: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-column {
+        flex-basis: 100%;
+        font-family: "Lora", serif;
+        margin-bottom: 20px;
+    }
+
+    .skills-grid {
+        flex-direction: column;
+        font-family: "Lora", serif;
+    }
+
+    .skills-grid ul {
+        flex-basis: 100%;
+        font-family: "Lora", serif;
+        margin-bottom: 10px;
+    }
+
+    .footer-bottom {
+        margin-top: 40px;
+        font-family: "Lora", serif;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-content {
+        flex-direction: column;
+        font-family: "Lora", serif;
+        align-items: center;
+        text-align: center;
+    }
+
+    .skills-grid ul {
+        margin: 0;
+        font-family: "Lora", serif;
+    }
+
+    .social-icons a {
+        margin: 0 5px;
+        font-family: "Lora", serif;
+    }
+
+    .social-icons img {
+        width: 18px;
+        font-family: "Lora", serif;
+        height: 18px;
+    }
+
+    .footer-bottom p {
+        font-size: 14px;
+        font-family: "Lora", serif;
+    }
+
+    .footer-bottom a {
+        font-size: 14px;
+        font-family: "Lora", serif;
+    }
+}
+        body {
+            font-family: "Merienda", cursive;
+            margin:0;
+            padding:0;
+            background-color: #f8f8f8;
+            margin-right: auto; 
+
+        }
+        /* .p-5 m-5{
+            font-family: "Merienda", cursive;  
+        } */
+
+        nav {
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        .profile-container {
+            display: flex;
+            font-family: "Lora", serif;
+            padding: 20px;
+            margin: 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            position: relative;
+            height: 90vh;
+        }
+
+        .profile-pic {
+            flex: 1;
+            padding-right: 20px;
+            font-family: "Lora", serif;
+            position: sticky;
+            top: 20px;
+            align-self: flex-start;
+        }
+
+        .profile-pic img {
+            width: 100%;
+            font-family: "Lora", serif;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-details {
+            color: #807e7e;
+            flex: 3;
+            font-family: "Lora", serif;
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+            padding-right: 20px;
+        }
+
+        .profile-details h1 {
+            color: #333232;
+            font-family: "Lora", serif;
+            margin-top: 0;
+        }
+
+        .profile-details p{
+            color: #807e7e;
+            font-family: "Lora", serif;
+            font-size: 16px;
+
+        }
+
+        .profile-details h2 {
+            color: #504e4e;
+            font-family: "Lora", serif;
+            margin: 10px 0;
+            /* margin-top: 20px;
+            margin-bottom: 10px; */
+        }
+
+        .verified {
+            color: green;
+            font-family: "Lora", serif;
+            font-weight: bold;
+        }
+
+        .role, .location, .member-since {
+            font-size: 16px;
+            font-family: "Lora", serif;
+            margin: 5px 0;
+        }
+
+        .profile-details ul {
+            list-style-type: none;
+            font-family: "Lora", serif;
+            padding: 0;
+        }
+
+        .profile-details ul li {
+            margin: 5px 0;
+            font-family: "Lora", serif;
+        }
+
+        .availability, .work-preference {
+            display: flex;
+            align-items: center;
+            font-family: "Lora", serif;
+           
+        }
+
+        .work-preference label {
+            margin-right: 10px;
+            font-family: "Lora", serif;
+        }
+
+        .work-preference input[type="checkbox"] {
+            margin-right: 5px;
+            font-family: "Lora", serif;
+        }
+
+        .scrollable-section {
+            margin-bottom: 20px;
+            font-family: "Lora", serif;
+        }
+
+        .scrollable-section::-webkit-scrollbar {
+            width: 8px;
+            font-family: "Lora", serif;
+        }
+
+        .scrollable-section::-webkit-scrollbar-thumb {
+            background-color: #888;
+            font-family: "Lora", serif;
+            border-radius: 10px;
+        }
+
+        .scrollable-section::-webkit-scrollbar-thumb:hover {
+            background-color: #635f5f;
+            font-family: "Lora", serif;
+        }
+
+        .highlights {
+            display: flex;
+            font-family: "Lora", serif;
+            justify-content: space-between;
+        }
+
+        .career-highlights, .education-highlights {
+            flex: 1;
+            font-family: "Lora", serif;
+            margin-right: 20px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1 class="p-5 m-5">SkillSync</h1>
+    <div class="profile-container">
+        <div class="profile-pic">
+            <img src="https://imgs.search.brave.com/aPzzOrFrseVkMghXZNnZWBH2FnWWgD3Q9BEDdwJlysg/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMtZ2xvYmFsLndl/YnNpdGUtZmlsZXMu/Y29tLzVlYzdkYWQy/ZTZmNjI5NWE5ZTJh/MjNkZC81ZWRmYTdj/NjYwNGM3N2IxYjRi/ZDY1OGFfcHJvZmls/ZXBob3RvNS5qcGVn" alt="Shimmie Sim">
+        </div>
+        <div class="profile-details">
+            <h1>Vladimir Mitrovic</h1>
+            <p class="verified">✔ Expert in Finance</p>
+            <p class="role">Financial Modeler</p>
+            <p class="location">📍 London, United Kingdom</p>
+            <p class="member-since">SkillSync member since April 12, 2022</p>
+            <p>Email: shimmie.sim@example.com</p>
+            <!-- <p>LinkedIn: <a href="#">linkedin.com/in/shimmiesim</a></p> -->
+            <p>GitHub: <a href="#">github.com/shimmiesim</a></p>
+            
+            <div class="scrollable-section">
+                <h2>Bio</h2>
+                <p>Shimmie is a finance expert with an 11-year career with KPMG in London and Copenhagen...</p>
+            </div>
+
+            <div class="scrollable-section">
+                <h2>Skills</h2>
+                <ul>
+                    <li>Financial Modeling</li>
+                    <li>Financial Forecasting</li>
+                    <li>Budgeting</li>
+                    <li>Valuation</li>
+                    <li>Comparable Company Analysis</li>
+                    <li>Accounting</li>
+                </ul>
+            </div>
+
+            <div class="scrollable-section">
+                <h2>Experience</h2>
+                <ul>
+                    <li>Associate Director, KPMG Denmark</li>
+                    <li>Manager, KPMG UK</li>
+                    <li>Audit Associate, KPMG UK</li>
+                </ul>
+            </div>
+
+            <div class="scrollable-section">
+                <h2>Availability:  <h2>
+                <p>Available to hire</p>
+            </div>
+            <div class="scrollable-section">
+                <h2>Looking for work in:</h2>
+                <label><input type="radio" name="work-type" checked> Part-time</label>
+                <label><input type="radio" name="work-type"> Full-time</label>
+                <label><input type="radio" name="work-type"> Freelancer</label>
+            </div>
+            
+
+            <div class="scrollable-section">
+                <h2>Charges per hour</h2>
+                <p>$120/hr</p>
+            </div>
+
+            <div class="scrollable-section">
+                <h2>Projects</h2>
+                <p>Project 1: Description of the project...</p>
+                <p>Project 2: Description of the project...</p>
+            </div>
+
+            <div class="scrollable-section">
+                <h2>Certificates</h2>
+                <ul>
+                    <li><img src="images/img.jfif" alt="Certificate 1"> Certificate 1</li>
+                    <li><img src="images/img.jfif" alt="Certificate 2"> Certificate 2</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+<footer class="footer-section">
+    <div class="footer-content">
+        <!-- Hire Talent Column -->
+        <div class="footer-column column-one">
+            <h3>Hire Talent</h3>
+            <hr class="footer-header-divider">
+            <ul>
+                <li><a href="developer.html">Hire Freelance Developers</a></li>
+                <li><a href="designer.html">Hire Freelance Designers</a></li>
+                <li><a href="marketingexperts.html">Hire Freelance Marketers</a></li>
+                <li><a href="productmanagers.html">Hire Freelance Product Managers</a></li>
+                <li><a href="projectmanager.html">Hire Freelance Project Managers</a></li>
+                <li><a href="financeexperts.html">Hire Freelance Finance Experts</a></li>
+            </ul>
+        </div>
+
+        <!-- Featured Design Skills Column -->
+        <div class="footer-column column-two">
+            <h3>Featured Design Skills</h3>
+            <hr class="footer-header-divider">
+            <div class="skills-grid">
+                <ul>
+                    <li><a href="#">UX Designers</a></li>
+                    <li><a href="#">UI Designers</a></li>
+                    <li><a href="#">Web Designers</a></li>
+                    <li><a href="#">Mobile App Designers</a></li>
+                    <li><a href="#">Graphic Designers</a></li>
+                    <li><a href="#">Brand Designers</a></li>
+                    <li><a href="#">UX Strategists</a></li>
+                    <li><a href="#">3D Animators</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Adobe After Effects Designers</a></li>
+                    <li><a href="#">Adobe Illustrator Experts</a></li>
+                    <li><a href="#">Creative Directors</a></li>
+                    <li><a href="#">Data Visualization Designers</a></li>
+                    <li><a href="#">E-commerce Designers</a></li>
+                    <li><a href="#">Illustrators</a></li>
+                    <li><a href="#">Landing Page Designers</a></li>
+                    <li><a href="#">Logo Designers</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Mobile UX Designers</a></li>
+                    <li><a href="#">Presentation Designers</a></li>
+                    <li><a href="#">Product Designers</a></li>
+                    <li><a href="#">SaaS Designers</a></li>
+                    <li><a href="#">UI/UX Designers</a></li>
+                    <li><a href="#">UX Researchers</a></li>
+                    <li><a href="#">Webflow Designers</a></li>
+                    <li><a href="#">WordPress Designers</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- About Column -->
+        <div class="footer-column column-three">
+            <h3>About</h3>
+            <hr class="footer-header-divider">
+            <ul>
+                <li><a href="#">Why SkillSync</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Press Center</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Community</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <hr class="footer-divider">
+    <div class="footer-bottom">
+        <p>&copy; 2010 - 2024 SkillSync, LLC | <a href="#">Privacy Policy</a> | <a href="#">Website Terms</a> | <a href="#">Accessibility</a></p>
+        <!-- <div class="social-icons class=">
+            <a href="#"><img src="https://imgs.search.brave.com/GpB5WQlesvec2MXDXDV3SmKb0pzSJzyH667WAzbxGcs/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy9j/L2NhL0xpbmtlZElu/X2xvZ29faW5pdGlh/bHMucG5n" alt="LinkedIn"></a>
+            <a href="#"><img src="https://imgs.search.brave.com/NQajyYj4Et3aaG0UGww0YbGbIZhXry6KAfk8SID3RXI/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/bW9zLmNtcy5mdXR1/cmVjZG4ubmV0L3oz/Ym42ZGVheG1yam1R/SE5Fa3BjWkUtMzIw/LTgwLmpwZw" alt="Twitter"></a>
+            <a href="#"><img src="https://imgs.search.brave.com/8dKir7rWy4ZIZW57ujo65GV7C-KX7S1wbyVOcIzmYOk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAzLzAwLzI0LzU5/LzM2MF9GXzMwMDI0/NTk1M19TdmloMURZ/SmJ3NHYydDkyRWhE/T1R3VzRMSXFNZ2ht/eS5qcGc" alt="Facebook"></a>
+            <a href="#"><img src="https://imgs.search.brave.com/sJqihmnn5oUkfb5hKhqnVCbEMZ-X4WWrRROiv3z4-Eg/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pLmd1/aW0uY28udWsvaW1n/L21lZGlhLzIyZTMy/YzFiMWRlNDBlZDcx/MDNlMmUyZTg5OTVi/NzQyYWM2MDBiZDYv/NzBfMF83MTdfNDMw/L21hc3Rlci83MTcu/anBnP3dpZHRoPTQ0/NSZkcHI9MSZzPW5v/bmU" alt="Instagram"></a>
+        </div> -->
+    </div>
+</footer>
+</body>
+</html>

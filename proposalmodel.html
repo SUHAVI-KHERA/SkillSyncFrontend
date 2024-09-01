@@ -10,7 +10,7 @@
 
 <body class="bg-white">
     <div class="container mx-auto py-12">
-        <div class="max-w-3xl mx-auto bg-white p-8 rounded shadow-md">
+        <form class="max-w-3xl mx-auto bg-white p-8 rounded shadow-md" id="proposalForm">
             <h1 class="text-3xl font-bold text-black mb-4">Project Proposal</h1>
 
             <!-- Introduction Section -->
@@ -43,7 +43,7 @@
             <!-- Estimated Budget -->
             <div class="mb-6">
                 <h3 class="text-xl font-semibold mb-2">Estimated Budget</h3>
-                <input type="text" id="estimatedBudget" placeholder="Enter estimated budget" class="w-full px-4 py-2 border rounded">
+                <input type="text" name="estimatedBudget" id="estimatedBudget" placeholder="Enter estimated budget" class="w-full px-4 py-2 border rounded">
             </div>
 
             <!-- Call-to-Action Section -->
@@ -63,9 +63,9 @@
 
             <!-- Submit Button -->
             <div class="flex justify-end mt-6">
-                <button class="bg-red-500 hover:bg-red-800 text-white font-bold py-2 px-4 rounded" onclick="submitProposal()">Submit Proposal</button>
+                <button type="submit" class="bg-red-500 hover:bg-red-800 text-white font-bold py-2 px-4 rounded">Submit Proposal</button>
             </div>
-        </div>
+        </form>
     </div>
 
     <!-- Toast Notification -->
@@ -86,8 +86,10 @@
             }, 3000);
         }
 
-        function submitProposal() {
+        function submitProposal(event) {
+            event.preventDefault(); // Prevent the form from submitting the traditional way
             showToast("Your proposal has been submitted successfully!");
+            // Here you can add the code to handle form submission, like sending data to a server
         }
 
         function addProject() {
@@ -116,6 +118,9 @@
             projectDiv.remove();
             showToast('Project removed successfully!');
         }
+
+        // Attach the form submission event listener
+        document.getElementById('proposalForm').addEventListener('submit', submitProposal);
     </script>
 </body>
 

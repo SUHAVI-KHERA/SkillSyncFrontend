@@ -1,6 +1,7 @@
 /* footer */
 .footer-section {
     background-color: black;
+    font-family: "Lora", serif;
     color: white;
     padding: 40px 0;
     font-family: Arial, sans-serif;
@@ -9,6 +10,7 @@
 .footer-content {
     display: flex;
     justify-content: space-between;
+    font-family: "Lora", serif;
     max-width: 1200px;
     margin: 0 auto;
     flex-wrap: wrap;
@@ -17,18 +19,21 @@
 /* General column styles */
 .footer-column {
     flex: 1;
+    font-family: "Lora", serif;
     min-width: 200px;
     margin-bottom: 20px;
 }
 
 .footer-column h3 {
     font-size: 18px;
+    font-family: "Lora", serif;
     margin-bottom: 10px;
 }
 
 /* Specific column styling */
 .column-one {
     width: 10%;
+    font-family: "Lora", serif;
     margin-right: 1%;
     margin-left: 5%;
 }
@@ -36,17 +41,20 @@
 .column-two {
     width: 50%;
     margin-right: 5%;
+    font-family: "Lora", serif;
     margin-left: 5%;
 }
 
 .column-three {
     width: 10%;
+    font-family: "Lora", serif;
     margin-left: 25%;
 }
 
 /* Styling for HR */
 .footer-header-divider {
     border: none;
+    font-family: "Lora", serif;
     border-top: 1px solid white;
     margin: 10px 0;
     width: 60%;
@@ -55,12 +63,14 @@
 /* Specific styling for featured design skills columns */
 .skills-grid {
     display: flex;
+    font-family: "Lora", serif;
     justify-content: space-between;
 }
 
 .skills-grid ul {
     flex: 1;
     min-width: 150px;
+    font-family: "Lora", serif;
     list-style-type: none;
     padding: 0;
     margin: 0 10px;
@@ -69,27 +79,32 @@
 /* List styles */
 .footer-column ul {
     list-style-type: none;
+    font-family: "Lora", serif;
     padding: 0;
 }
 
 .footer-column ul li {
     margin-bottom: 10px;
+    font-family: "Lora", serif;
 }
 
 .footer-column ul li a {
     color: white;
     text-decoration: none;
+    font-family: "Lora", serif;
     transition: color 0.3s;
 }
 
 .footer-column ul li a:hover {
     color: #d1363e;
+    font-family: "Lora", serif;
 }
 
 /* Footer bottom styling */
 .footer-divider {
     border: none;
     border-top: 1px solid white;
+    font-family: "Lora", serif;
     margin: 20px 0;
     max-width: 1200px;
     margin: 20px auto;
@@ -97,35 +112,42 @@
 
 .footer-bottom {
     text-align: center;
+    font-family: "Lora", serif;
     margin-top: 20px;
 }
 
 .footer-bottom p {
     margin: 0;
+    font-family: "Lora", serif;
 }
 
 .footer-bottom a {
     color: white;
+    font-family: "Lora", serif;
     text-decoration: none;
     margin: 0 10px;
 }
 
 .footer-bottom a:hover {
     color: #d1363e;
+    font-family: "Lora", serif;
 }
 
 /* Social icon styles */
 .social-icons {
     margin-top: 10px;
+    font-family: "Lora", serif;
 }
 
 .social-icons a {
     display: inline-block;
+    font-family: "Lora", serif;
     margin: 0 10px;
 }
 
 .social-icons img {
     width: 20px;
+    font-family: "Lora", serif;
     height: 20px;
     filter: brightness(0) invert(1);
     transition: filter 0.3s;
@@ -133,25 +155,30 @@
 
 .social-icons a:hover img {
     filter: brightness(0) invert(1) sepia(1) hue-rotate(-50deg);
+    font-family: "Lora", serif;
 }
 
 /* Responsive styling */
 @media (max-width: 992px) {
     .footer-column {
         flex-basis: 50%;
+        font-family: "Lora", serif;
     }
 
     .skills-grid {
         flex-wrap: wrap;
+        font-family: "Lora", serif;
     }
 
     .skills-grid ul {
         flex-basis: 45%;
+        font-family: "Lora", serif;
         margin-bottom: 20px;
     }
 
     .column-one, .column-two, .column-three {
         width: 100%;
+        font-family: "Lora", serif;
         margin: 0;
     }
 }
@@ -159,48 +186,58 @@
 @media (max-width: 768px) {
     .footer-column {
         flex-basis: 100%;
+        font-family: "Lora", serif;
         margin-bottom: 20px;
     }
 
     .skills-grid {
         flex-direction: column;
+        font-family: "Lora", serif;
     }
 
     .skills-grid ul {
         flex-basis: 100%;
+        font-family: "Lora", serif;
         margin-bottom: 10px;
     }
 
     .footer-bottom {
         margin-top: 40px;
+        font-family: "Lora", serif;
     }
 }
 
 @media (max-width: 480px) {
     .footer-content {
         flex-direction: column;
+        font-family: "Lora", serif;
         align-items: center;
         text-align: center;
     }
 
     .skills-grid ul {
         margin: 0;
+        font-family: "Lora", serif;
     }
 
     .social-icons a {
         margin: 0 5px;
+        font-family: "Lora", serif;
     }
 
     .social-icons img {
         width: 18px;
+        font-family: "Lora", serif;
         height: 18px;
     }
 
     .footer-bottom p {
         font-size: 14px;
+        font-family: "Lora", serif;
     }
 
     .footer-bottom a {
         font-size: 14px;
+        font-family: "Lora", serif;
     }
 }

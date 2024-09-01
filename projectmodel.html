@@ -36,20 +36,20 @@
             <!-- Title Field -->
             <div class="mb-4">
                 <label class="block text-black font-semibold mb-2" for="title">Title</label>
-                <input type="text" id="title" placeholder="Enter project title" class="w-full p-3 border cursor-pointer rounded focus:outline-none focus:ring-2 focus:ring-black">
+                <input type="text" id="title" name ="title" placeholder="Enter project title" class="w-full p-3 border cursor-pointer rounded focus:outline-none focus:ring-2 focus:ring-black">
             </div>
 
             <!-- Description Field -->
             <div class="mb-4">
                 <label class="block text-black font-semibold mb-2" for="description">Description</label>
-                <textarea id="description" rows="3" placeholder="Enter project description" class="w-full p-3 border cursor-pointer rounded focus:outline-none focus:ring-2 focus:ring-black"></textarea>
+                <textarea id="description" rows="3" name ="description"  placeholder="Enter project description" class="w-full p-3 border cursor-pointer rounded focus:outline-none focus:ring-2 focus:ring-black"></textarea>
             </div>
 
             
             <!-- Project Type Dropdown Field -->
             <div class="mb-4">
                 <label class="block text-black cursor-pointer font-semibold mb-2" for="project-type">Project Type</label>
-                <select id="project-type" class="w-full p-3 border cursor-pointer rounded focus:outline-none focus:ring-2 focus:ring-black">
+                <select id="project-type"  name ="domain" class="w-full p-3 border cursor-pointer rounded focus:outline-none focus:ring-2 focus:ring-black">
                     <option value="" disabled selected>Select a project type</option>
                     <option value="web-development">Web Development</option>
                     <option value="graphic-design">Graphic Design</option>
@@ -63,7 +63,7 @@
             <!-- Skills Required Field -->
             <div class="mb-4">
                 <label class="block text-black font-semibold mb-2" for="skills">Skills Required</label>
-                <input type="text" id="skills" placeholder="e.g., JavaScript, Python, Design" class="w-full p-3 border rounded focus:outline-none focus:ring-2 focus:ring-black" onkeypress="addSkill(event)">
+                <input type="text" id="skills" name ="skills"  placeholder="e.g., JavaScript, Python, Design" class="w-full p-3 border rounded focus:outline-none focus:ring-2 focus:ring-black" onkeypress="addSkill(event)">
                 <div id="skills-container" class="flex cursor-pointer flex-wrap gap-2 mt-2">
                     <!-- Tags will appear here -->
                 </div>
@@ -72,13 +72,13 @@
             <!-- Estimated Budget Field -->
             <div class="mb-4">
                 <label class="block text-black font-semibold mb-2" for="budget">Estimated Budget</label>
-                <input type="text" id="budget" placeholder="Enter estimated budget" class="w-full cursor-pointer p-3 border rounded focus:outline-none focus:ring-2 focus:ring-black">
+                <input type="text" id="budget"  name ="budget" placeholder="Enter estimated budget" class="w-full cursor-pointer p-3 border rounded focus:outline-none focus:ring-2 focus:ring-black">
             </div>
 
             <!-- Deadline Field -->
             <div class="mb-4">
                 <label class="block text-black font-semibold mb-2" for="deadline">Deadline</label>
-                <input type="date" id="deadline" class="w-full cursor-pointer p-3 border rounded focus:outline-none focus:ring-2 focus:ring-black">
+                <input type="date" id="deadline"  name ="deadline" class="w-full cursor-pointer p-3 border rounded focus:outline-none focus:ring-2 focus:ring-black">
             </div>
 
 
